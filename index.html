@@ -4,10 +4,56 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>YJ's Works</title>
+        <!-- fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <p>XD</p>
-        <h1>Hi hi hi hi</h1>
+        <section class="prolio" id="prolio">
+            <div class="right" id="right">
+                <div class="picName">
+                    <img src="img/head.png" alt="head.png" />
+                    <div>許云柔</div>
+                    <a href="#">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
+                </div>
+            </div>
+            <div class="left" id="left">
+                <div>
+                    <p>歷年作品集</p>
+                    <span>YJ's Work Collection</span>
+                </div>
+            </div>
+            <!-- <div class="blur"></div> -->
+        </section>
+        <section class="leather" id="leather"></section>
+
+        <script>
+            var prolio = document.getElementById('prolio');
+            var right = document.getElementById('right');
+            var left = document.getElementById('left');
+            var leather = document.getElementById('leather');
+
+            window.onscroll = function() {
+                console.log(window.scrollY);
+                if (window.scrollY > 200) {
+                    prolio.style.height = '80px';
+                    prolio.style.position = 'fixed';
+                    prolio.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                    right.style.display = 'none';
+                    left.style.display = 'none';
+                    leather.style.position = 'relative';
+                    leather.style.backgroundImage = 'url(img/bg.jpg)';
+                } else {
+                    // prolio.style.height = '100vh';
+                    // prolio.style.position = 'absolute';
+                }
+            };
+        </script>
     </body>
 </html>

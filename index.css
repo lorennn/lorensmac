@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    position: relative;
+}
+
+/* prolio */
+.prolio {
+    width: 100vw;
+    height: 300vh;
+    position: absolute;
+    transition: all 0.5s;
+    display: flex;
+}
+.prolio .right {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+}
+.prolio .right::after {
+    content: '';
+    width: 1px;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.prolio .blur {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+}
+.prolio .picName {
+    width: 30%;
+    margin-left: 55%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.prolio .picName img {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    -webkit-filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
+}
+.prolio .picName div {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    letter-spacing: 7px;
+    line-height: 2.5;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+.prolio .picName span {
+    color: white;
+    text-align: center;
+    letter-spacing: 7px;
+    line-height: 2;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+}
+.prolio .picName a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    letter-spacing: 7px;
+    line-height: 2;
+    position: absolute;
+    padding-left: 10px;
+    right: 0px;
+    left: 0px;
+    transition: color 0.5s;
+}
+.prolio .picName .fa-caret-right {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    vertical-align: middle;
+    padding-left: 6px;
+    transition: color 0.5s;
+}
+
+.prolio .picName:hover .fa-caret-right,
+.prolio .picName:hover a {
+    color: rgba(255, 255, 255, 1);
+}
+
+.prolio .left {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+
+    color: white;
+    display: flex;
+    align-content: center;
+    -webkit-align-content: center;
+}
+
+.prolio .left > div {
+    height: 110px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 150px;
+}
+
+.prolio .left p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 4;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.prolio .left span {
+    letter-spacing: 2px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* prolio end */
+/* leather */
+.leather {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+    transition: background-image 0.5s;
+}
+/* leather end */
