@@ -15,12 +15,21 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
+        <aside id="aside">
+            <div>皮革</div>
+            <div>玻璃</div>
+            <div>陶瓷</div>
+            <div>金工</div>
+            <div>木工</div>
+            <div>產品設計</div>
+            <div>社會設計</div>
+        </aside>
         <section class="prolio" id="prolio">
             <div class="right" id="right">
                 <div class="picName">
                     <img src="img/head.png" alt="head.png" />
                     <div>許云柔</div>
-                    <a href="#">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
+                    <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
                 </div>
             </div>
             <div class="left" id="left">
@@ -29,16 +38,36 @@
                     <span>YJ's Work Collection</span>
                 </div>
             </div>
-            <!-- <div class="blur"></div> -->
+            <div class="prolio_small" id="prolioS">
+                <div class="logo"></div>
+                <div class="name">
+                    <div>許云柔 | 歷年作品集</div>
+                    <span>YJ's Work Collection</span>
+                </div>
+                <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
+            </div>
         </section>
         <section class="leather" id="leather"></section>
+        <section class="glass" id="glass"></section>
+        <section class="ceramics" id="ceramics"></section>
+        <section class="metal" id="metal"></section>
+        <section class="wood" id="wood"></section>
+        <section class="product" id="product"></section>
+        <section class="social" id="social"></section>
 
         <script>
+            // 抓取螢幕高度，aside的padding-top
+            var windowH = window.screen.height;
+            // console.log(windowH);
+
+            var aside = document.getElementById('aside');
             var prolio = document.getElementById('prolio');
             var right = document.getElementById('right');
             var left = document.getElementById('left');
             var leather = document.getElementById('leather');
+            var prolioS = document.getElementById('prolioS');
 
+            // 捲軸向上超過200xp，prolio收合
             window.onscroll = function() {
                 console.log(window.scrollY);
                 if (window.scrollY > 200) {
@@ -48,9 +77,12 @@
                     right.style.display = 'none';
                     left.style.display = 'none';
                     leather.style.position = 'relative';
-                    leather.style.backgroundImage = 'url(img/bg.jpg)';
+                    setTimeout(function() {
+                        leather.style.backgroundImage = 'url(img/bg.jpg)';
+                    }, 1000);
+                    prolioS.style.display = 'flex';
+                    aside.style.display = 'block';
                 } else {
-                    // prolio.style.height = '100vh';
                     // prolio.style.position = 'absolute';
                 }
             };

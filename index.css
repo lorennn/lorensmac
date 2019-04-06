@@ -2,8 +2,51 @@
     margin: 0;
     padding: 0;
 }
+
+/* 強調黃： rgb(255, 204, 0); */
+
 body {
     position: relative;
+}
+
+aside {
+    display: none;
+    width: 40px;
+    /* height: 100vh; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 40px;
+    z-index: 4;
+}
+aside::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 290px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: -10px;
+    top: 30px;
+}
+aside div {
+    margin: 20px 0;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+aside div::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: -12px;
+    margin-top: 9px;
 }
 
 /* prolio */
@@ -13,6 +56,7 @@ body {
     position: absolute;
     transition: all 0.5s;
     display: flex;
+    z-index: 5;
 }
 .prolio .right {
     background-color: rgba(0, 0, 0, 0.3);
@@ -41,6 +85,7 @@ body {
 .prolio .picName {
     width: 30%;
     margin-left: 55%;
+    margin-top: -20px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -73,7 +118,7 @@ body {
 }
 .prolio .picName a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(255, 204, 0);
     text-align: center;
     letter-spacing: 7px;
     line-height: 2;
@@ -81,12 +126,13 @@ body {
     padding-left: 10px;
     right: 0px;
     left: 0px;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     transition: color 0.5s;
 }
 .prolio .picName .fa-caret-right {
     text-align: center;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(255, 204, 0);
     vertical-align: middle;
     padding-left: 6px;
     transition: color 0.5s;
@@ -94,7 +140,8 @@ body {
 
 .prolio .picName:hover .fa-caret-right,
 .prolio .picName:hover a {
-    color: rgba(255, 255, 255, 1);
+    filter: none;
+    transition: filter 0.5s;
 }
 
 .prolio .left {
@@ -102,7 +149,6 @@ body {
     position: relative;
     width: 50vw;
     height: 100vh;
-
     color: white;
     display: flex;
     align-content: center;
@@ -131,17 +177,108 @@ body {
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
+.prolio_small {
+    display: none;
+    align-items: center;
+}
+
+.prolio_small .logo {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(62, 156, 141);
+    margin-left: 50px;
+}
+
+.prolio_small .name {
+    margin-left: 36px;
+    margin-top: -2px;
+}
+.prolio_small .name div {
+    letter-spacing: 6px;
+    line-height: 2;
+    font-size: 18px;
+}
+.prolio_small .name span {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.prolio_small a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    letter-spacing: 7px;
+    line-height: 80px;
+    position: absolute;
+    padding: 0 50px;
+    right: 0px;
+    right: 0px;
+    transition: color 0.5s;
+}
+
+.prolio_small a::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0px;
+    margin-top: 10px;
+    width: 1px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.prolio_small .fa-caret-right {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+    padding-left: 6px;
+    margin-top: -4px;
+    transition: color 0.5s;
+}
+.prolio_small a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+.prolio_small a:hover .fa-caret-right {
+    color: rgba(0, 0, 0, 0.8);
+}
+
 /* prolio end */
 /* leather */
 .leather {
     position: fixed;
-    z-index: -1;
     width: 100vw;
     height: 100vh;
     background-image: url(img/bgBlur.png);
     background-size: contain;
     background-position-y: 0px;
     background-position-x: 80px;
-    transition: background-image 0.5s;
+    transition: background-image 1s;
 }
 /* leather end */
+/* glass */
+.glass {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
+/* glass end */
+/* ceramics */
+
+/* ceramics end */
+/* metal */
+
+/* metal end */
+/* wood */
+
+/* wood end */
+/* product */
+
+/* product end */
+/* social */
+
+/* social end */
