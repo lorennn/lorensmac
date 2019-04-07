@@ -39,11 +39,13 @@
                 </div>
             </div>
             <div class="prolio_small" id="prolioS">
-                <div class="logo"></div>
-                <div class="name">
-                    <div>許云柔 | 歷年作品集</div>
-                    <span>YJ's Work Collection</span>
-                </div>
+                <a href="index.html" title="許云柔 | 歷年作品集">
+                    <div class="logo"></div>
+                    <div class="name">
+                        <div>許云柔 | 歷年作品集</div>
+                        <span>YJ's Work Collection</span>
+                    </div>
+                </a>
                 <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
             </div>
         </section>
@@ -56,34 +58,49 @@
         <section class="social" id="social"></section>
 
         <script>
-            // 抓取螢幕高度，aside的padding-top
-            var windowH = window.screen.height;
-            // console.log(windowH);
-
+            var body = document.body;
             var aside = document.getElementById('aside');
             var prolio = document.getElementById('prolio');
             var right = document.getElementById('right');
             var left = document.getElementById('left');
             var leather = document.getElementById('leather');
+            var glass = document.getElementById('glass');
             var prolioS = document.getElementById('prolioS');
 
+            // 抓取螢幕高度，aside的padding-top
+            var windowH = window.screen.height;
+            aside.style.height = windowH;
+            // console.log(windowH);
+
             // 捲軸向上超過200xp，prolio收合
-            window.onscroll = function() {
+            window.onscroll = function(e) {
                 console.log(window.scrollY);
-                if (window.scrollY > 200) {
-                    prolio.style.height = '80px';
-                    prolio.style.position = 'fixed';
-                    prolio.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
-                    right.style.display = 'none';
-                    left.style.display = 'none';
-                    leather.style.position = 'relative';
-                    setTimeout(function() {
+                if (prolio.style.position != 'fixed') {
+                    // 當prolio收合時
+                    if (window.scrollY > windowH) {
+                        // window.addEventListener('wheel', function(e) {
+                        //     e.preventDefault(0);
+                        // });
+                        body.classList.add('stopScroll');
+                        setTimeout(function() {
+                            body.classList.remove('stopScroll');
+                        }, 1000);
+                        prolio.style.height = '80px';
+                        prolio.style.position = 'fixed';
+                        prolio.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+                        right.style.display = 'none';
+                        left.style.display = 'none';
+                        leather.style.position = 'relative';
+                        glass.style.position = 'relative';
                         leather.style.backgroundImage = 'url(img/bg.jpg)';
-                    }, 1000);
-                    prolioS.style.display = 'flex';
-                    aside.style.display = 'block';
-                } else {
-                    // prolio.style.position = 'absolute';
+                        prolioS.style.display = 'flex';
+                        aside.style.display = 'block';
+                        window.scroll(0, 0);
+                        // setTimeout(function() {
+                        //     console.log('XD');
+
+                        // }, 1000);
+                    }
                 }
             };
         </script>

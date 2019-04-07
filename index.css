@@ -4,6 +4,8 @@
 }
 
 /* 強調黃： rgb(255, 204, 0); */
+/* 強調黑：color: rgb(50, 50, 50); */
+/* 基調黑：color: rgba(50, 50, 50, 0.6); */
 
 body {
     position: relative;
@@ -52,12 +54,16 @@ aside div::before {
 /* prolio */
 .prolio {
     width: 100vw;
-    height: 300vh;
+    height: 200vh;
     position: absolute;
     transition: all 0.5s;
     display: flex;
     z-index: 5;
 }
+.stopScroll {
+    overflow-y: hidden;
+}
+
 .prolio .right {
     background-color: rgba(0, 0, 0, 0.3);
     position: relative;
@@ -182,9 +188,13 @@ aside div::before {
     align-items: center;
 }
 
+.prolio_small a:first-child {
+    display: flex;
+    text-decoration: none;
+}
 .prolio_small .logo {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background-color: rgb(62, 156, 141);
     margin-left: 50px;
 }
@@ -192,6 +202,7 @@ aside div::before {
 .prolio_small .name {
     margin-left: 36px;
     margin-top: -2px;
+    color: rgb(50, 50, 50);
 }
 .prolio_small .name div {
     letter-spacing: 6px;
@@ -204,7 +215,7 @@ aside div::before {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.prolio_small a {
+.prolio_small > a:last-child {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -217,17 +228,17 @@ aside div::before {
     transition: color 0.5s;
 }
 
-.prolio_small a::before {
+.prolio_small > a:last-child::before {
     content: '';
     position: absolute;
     display: block;
     left: 0px;
-    margin-top: 10px;
+    margin-top: 14px;
     width: 1px;
-    height: 60px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.2);
 }
-.prolio_small .fa-caret-right {
+.prolio_small > a:last-child > .fa-caret-right {
     text-align: center;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.3);
@@ -236,10 +247,10 @@ aside div::before {
     margin-top: -4px;
     transition: color 0.5s;
 }
-.prolio_small a:hover {
+.prolio_small > a:last-child:hover {
     color: rgba(0, 0, 0, 0.8);
 }
-.prolio_small a:hover .fa-caret-right {
+.prolio_small > a:last-child:hover .fa-caret-right {
     color: rgba(0, 0, 0, 0.8);
 }
 
