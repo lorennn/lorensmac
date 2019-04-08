@@ -16,15 +16,28 @@
     </head>
     <body>
         <aside id="aside">
-            <div>皮革</div>
-            <div>玻璃</div>
-            <div>陶瓷</div>
-            <div>金工</div>
-            <div>木工</div>
-            <div>產品設計</div>
-            <div>社會設計</div>
+            <ul>
+                <li>皮革</li>
+                <li>玻璃</li>
+                <li>陶瓷</li>
+                <li>金工</li>
+                <li>木工</li>
+                <li>產品<br />設計</li>
+                <li>社會<br />設計</li>
+                <p>t<br />o<br />p</p>
+            </ul>
         </aside>
         <section class="prolio" id="prolio">
+            <div class="prolio_small" id="prolioS">
+                <a href="index.html" title="許云柔 | 歷年作品集">
+                    <div class="logo"></div>
+                    <div class="name">
+                        <div>許云柔 | 歷年作品集</div>
+                        <span>YJ's Work Collection</span>
+                    </div>
+                </a>
+                <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
+            </div>
             <div class="right" id="right">
                 <div class="picName">
                     <img src="img/head.png" alt="head.png" />
@@ -38,16 +51,6 @@
                     <span>YJ's Work Collection</span>
                 </div>
             </div>
-            <div class="prolio_small" id="prolioS">
-                <a href="index.html" title="許云柔 | 歷年作品集">
-                    <div class="logo"></div>
-                    <div class="name">
-                        <div>許云柔 | 歷年作品集</div>
-                        <span>YJ's Work Collection</span>
-                    </div>
-                </a>
-                <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
-            </div>
         </section>
         <section class="leather" id="leather"></section>
         <section class="glass" id="glass"></section>
@@ -57,14 +60,22 @@
         <section class="product" id="product"></section>
         <section class="social" id="social"></section>
 
+        <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             var body = document.body;
             var aside = document.getElementById('aside');
             var prolio = document.getElementById('prolio');
             var right = document.getElementById('right');
             var left = document.getElementById('left');
+
             var leather = document.getElementById('leather');
             var glass = document.getElementById('glass');
+            var ceramics = document.getElementById('ceramics');
+            var metal = document.getElementById('metal');
+            var wood = document.getElementById('wood');
+            var product = document.getElementById('product');
+            var social = document.getElementById('social');
+
             var prolioS = document.getElementById('prolioS');
 
             // 抓取螢幕高度，aside的padding-top
@@ -72,37 +83,136 @@
             aside.style.height = windowH;
             // console.log(windowH);
 
-            // 捲軸向上超過200xp，prolio收合
+            // 捲軸向上超過視窗高度，prolio收合
             window.onscroll = function(e) {
                 console.log(window.scrollY);
+
                 if (prolio.style.position != 'fixed') {
-                    // 當prolio收合時
+                    // 當prolio展開時
+
                     if (window.scrollY > windowH) {
-                        // window.addEventListener('wheel', function(e) {
-                        //     e.preventDefault(0);
-                        // });~^
+                        // 1.顯示aside、prolioS
                         body.classList.add('stopScroll');
                         setTimeout(function() {
                             body.classList.remove('stopScroll');
-                        }, 1000);
-                        prolio.style.height = '80px';
+                        }, 600);
+                        prolio.style.height = 'unset';
                         prolio.style.position = 'fixed';
                         prolio.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
                         right.style.display = 'none';
                         left.style.display = 'none';
                         leather.style.position = 'relative';
                         glass.style.position = 'relative';
+                        ceramics.style.position = 'relative';
+                        metal.style.position = 'relative';
+                        wood.style.position = 'relative';
+                        product.style.position = 'relative';
+                        social.style.position = 'relative';
+
                         leather.style.backgroundImage = 'url(img/bg.jpg)';
                         prolioS.style.display = 'flex';
+                        prolioS.style.height = '80px';
                         aside.style.display = 'block';
+                        aside.style.position = 'fixed';
                         window.scroll(0, 0);
-                        // setTimeout(function() {
-                        //     console.log('XD');
-
-                        // }, 1000);
+                    }
+                } else {
+                    // 當prolio收起時
+                    if (window.scrollY > windowH * 0.5 && window.scrollY < windowH * 1.5) {
+                        // 2.抓取視窗高度改變aside
+                        // 有時間加上before小點換顏色
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '22px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
+                    } else if (window.scrollY > windowH * 1.5 && window.scrollY < windowH * 2.5) {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '22px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
+                    } else if (window.scrollY > windowH * 2.5 && window.scrollY < windowH * 3.5) {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '22px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
+                    } else if (window.scrollY > windowH * 3.5 && window.scrollY < windowH * 4.5) {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '22px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
+                    } else if (window.scrollY > windowH * 4.5 && window.scrollY < windowH * 5.5) {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '22px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
+                    } else if (window.scrollY > windowH * 5.5) {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '22px'; //7
+                        // aside.firstElementChild.lastElementChild.style.fontSize = '20px'; //top放大或加上呼吸效果call to action效果
+                    } else {
+                        aside.firstElementChild.firstElementChild.style.fontSize = '22px'; //1
+                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //3
+                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
+                            '16px'; //4
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //5
+                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
+                            '16px'; //6
+                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
                     }
                 }
             };
+
+            // 重新整理回到最高點
+            // window.onload = function() {
+            //     window.scrollY = 0;
+            // };
         </script>
     </body>
 </html>

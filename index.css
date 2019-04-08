@@ -13,42 +13,60 @@ body {
 
 aside {
     display: none;
-    width: 40px;
-    /* height: 100vh; */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 100px;
+    height: 100vh;
+    position: relative;
     margin-left: 40px;
     z-index: 4;
 }
-aside::before {
+aside ul::before {
     content: '';
     display: block;
     position: absolute;
     width: 1px;
-    height: 290px;
+    height: 345px;
     background-color: rgba(0, 0, 0, 0.2);
     left: -10px;
-    top: 30px;
+    top: 12px;
 }
-aside div {
+
+aside ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+aside ul li {
+    font-size: 16px;
+    list-style: none;
     margin: 20px 0;
     line-height: 1.5;
     letter-spacing: 2px;
     color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
 }
 
-aside div::before {
+aside ul li::before {
     content: '';
     display: block;
     position: absolute;
-    width: 4px;
-    height: 4px;
-    border: 1px solid #fff;
-    border-radius: 2px;
-    background-color: rgba(0, 0, 0, 0.2);
-    left: -12px;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+    background-color: #aaa;
+    left: -14px;
     margin-top: 9px;
+}
+aside ul p {
+    position: absolute;
+    left: -12px;
+    bottom: -75px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: rgba(0, 0, 0, 0.5);
+}
+aside ul p:hover {
+    color: rgba(0, 0, 0, 0.8);
 }
 
 /* prolio */
@@ -56,7 +74,6 @@ aside div::before {
     width: 100vw;
     height: 200vh;
     position: absolute;
-    transition: all 0.5s;
     display: flex;
     z-index: 5;
 }
@@ -184,8 +201,13 @@ aside div::before {
 }
 
 .prolio_small {
+    width: 100%;
+    height: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
     display: none;
     align-items: center;
+    transition: height 1s;
 }
 
 .prolio_small a:first-child {
@@ -280,16 +302,61 @@ aside div::before {
 /* glass end */
 /* ceramics */
 
+.ceramics {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
 /* ceramics end */
 /* metal */
 
+.metal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
 /* metal end */
 /* wood */
 
+.wood {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
 /* wood end */
 /* product */
 
+.product {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
 /* product end */
 /* social */
 
+.social {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bgBlur.png);
+    background-size: contain;
+    background-position-y: 0px;
+    background-position-x: 80px;
+}
 /* social end */
