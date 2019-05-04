@@ -1,0 +1,129 @@
+/* 麵包屑 */
+
+.breadcrumb {
+    position: fixed;
+    width: auto;
+    height: 100vh;
+    display: block;
+    margin-left: 40px;
+}
+.breadcrumb > ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-lr;
+    display: flex;
+}
+.breadcrumb > ul::before {
+    content: '::';
+    position: relative;
+    left: 2px;
+    color: #999;
+}
+.breadcrumb > ul > li {
+    color: #555;
+    letter-spacing: 5.2px;
+    margin: 16px 0;
+    display: block;
+    cursor: default;
+}
+
+.breadcrumb > ul > li > a {
+    letter-spacing: 5.2px;
+    text-decoration: none;
+    color: #555;
+}
+.breadcrumb > ul > li > a:hover {
+    color: #333;
+}
+.breadcrumb > ul > li > a::after {
+    content: '>';
+    position: relative;
+    left: 1px;
+    bottom: -15px;
+    /* color: #999; */
+}
+
+/* 上半部介紹 main */
+.main {
+    width: 100%;
+    height: 80%;
+}
+.main > figure {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    padding: 200px 50px 50px 50px;
+}
+
+.main > figure > .picture {
+    width: 500px;
+}
+
+.main > figure > .picture > img {
+    width: 100%;
+}
+
+.main .cont {
+    height: fit-content;
+    padding-left: 70px;
+    padding-top: 80px;
+}
+
+.main .cont > span {
+    display: block;
+}
+.main .cont .name {
+    font-size: 23px;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 3;
+}
+
+.main .cont .year {
+    font-size: 15px;
+    color: rgb(155, 155, 155);
+    letter-spacing: 2px;
+    line-height: 2;
+}
+.main .cont .year::before {
+    content: '/';
+    padding-right: 12px;
+}
+.main .cont .media {
+    font-size: 15px;
+    color: rgb(70, 70, 70);
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.main .cont .media::before {
+    content: '/';
+    padding-right: 12px;
+}
+
+/* 下半部介紹 intro */
+.intro {
+    background-color: #f2f3f5;
+    width: 100%;
+    padding: 60px 0 200px 0px;
+}
+
+.thought,
+.feature {
+    width: 50%;
+    margin: 80px auto;
+}
+.title {
+    line-height: 3;
+    font-size: 19px;
+    letter-spacing: 10.2px;
+    color: #777;
+}
+.title::before {
+    content: '/';
+    padding-right: 15px;
+}
+.contain {
+    line-height: 2;
+}

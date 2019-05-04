@@ -7,11 +7,27 @@
 /* 強調黑：color: rgb(50, 50, 50); */
 /* 基調黑：color: rgba(50, 50, 50, 0.6); */
 
+/* ＿＿＿ scroll bar ＿＿＿ */
+/* bar的樣式 */
+::-webkit-scrollbar-thumb {
+    height: 2px;
+    background-color: #b46868;
+}
+
+/* 軌道的樣式 */
+::-webkit-scrollbar-track {
+}
+
+html {
+    background-color: #f2f3f5;
+    scroll-behavior: smooth;
+    /* transition: all 0.5s; */
+}
 body {
     position: relative;
 }
 
-aside {
+.indexAside {
     display: none;
     width: 100px;
     height: 100vh;
@@ -19,7 +35,16 @@ aside {
     margin-left: 40px;
     z-index: 4;
 }
-aside ul::before {
+.indexAside::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 100vh;
+    left: -40px;
+    background-image: linear-gradient(90deg, #f2f3f5 14%, transparent);
+}
+.indexAside ul::before {
     content: '';
     display: block;
     position: absolute;
@@ -30,22 +55,22 @@ aside ul::before {
     top: 12px;
 }
 
-aside ul {
+.indexAside ul {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-aside ul li {
+.indexAside ul li {
     font-size: 16px;
     list-style: none;
     margin: 20px 0;
     line-height: 1.5;
     letter-spacing: 2px;
-    color: rgba(0, 0, 0, 0.5);
     transition: all 0.5s;
+    cursor: pointer;
 }
 
-aside ul li::before {
+.indexAside ul li::before {
     content: '';
     display: block;
     position: absolute;
@@ -57,26 +82,50 @@ aside ul li::before {
     left: -14px;
     margin-top: 9px;
 }
-aside ul p {
+
+.indexAside ul li > a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+.indexAside ul li > a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+.indexAside > ul > a {
+    text-decoration: none;
     position: absolute;
     left: -12px;
     bottom: -75px;
     font-size: 15px;
     line-height: 1.2;
     color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
-aside ul p:hover {
+.indexAside > ul > a:hover {
     color: rgba(0, 0, 0, 0.8);
 }
 
-/* prolio */
+/* prolio 介紹區 */
 .prolio {
     width: 100vw;
-    height: 200vh;
+    height: 201vh;
     position: absolute;
     display: flex;
     z-index: 5;
 }
+.prolio svg {
+    width: 42px;
+    height: 80px;
+    position: absolute;
+    bottom: 60px;
+    right: -40px;
+    z-index: 1;
+}
+.prolio svg text {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
 .stopScroll {
     overflow-y: hidden;
 }
@@ -143,7 +192,7 @@ aside ul p:hover {
     text-decoration: none;
     color: rgb(255, 204, 0);
     text-align: center;
-    letter-spacing: 7px;
+    letter-spacing: 6px;
     line-height: 2;
     position: absolute;
     padding-left: 10px;
@@ -277,86 +326,142 @@ aside ul p:hover {
 }
 
 /* prolio end */
-/* leather */
-.leather {
+
+/* 沒用的整屏滾動 */
+/* .down {
+    animation: down 0.5s ease-in-out forwards;
+}
+@keyframes down {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-14.28%);
+    }
+}
+.up1 {
+    animation: up1 0.5s ease-in-out forwards;
+}
+.down1 {
+    animation: down1 0.5s ease-in-out forwards;
+}
+@keyframes up1 {
+    0% {
+        transform: translateY(-14.28%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+@keyframes down1 {
+    0% {
+        transform: translateY(-14.28%);
+    }
+    100% {
+        transform: translateY(-28.56%);
+    }
+}
+.up2 {
+    animation: up2 0.5s ease-in-out forwards;
+}
+.down2 {
+    animation: down2 0.5s ease-in-out forwards;
+}
+@keyframes up2 {
+    0% {
+        transform: translateY(-28.56%);
+    }
+    100% {
+        transform: translateY(-14.28%);
+    }
+}
+@keyframes down2 {
+    0% {
+        transform: translateY(-28.56%);
+    }
+    100% {
+        transform: translateY(-42.84%);
+    }
+} */
+
+/* _____ 作品區共用 _____ */
+#sectionS {
+    overflow: hidden;
+    transition: all 10s;
+}
+.object {
+    overflow-x: scroll;
+    display: flex;
     position: fixed;
-    width: 100vw;
+    width: auto;
     height: 100vh;
-    background-image: url(img/bgBlur.png);
     background-size: contain;
     background-position-y: 0px;
     background-position-x: 80px;
+    padding-left: 10%;
+    border-bottom: 1px #fff solid;
     transition: background-image 1s;
 }
-/* leather end */
-/* glass */
-.glass {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
-}
-/* glass end */
-/* ceramics */
 
-.ceramics {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
+.object::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+    position: relative;
+    top: 30px;
+    margin-bottom: 100px;
 }
-/* ceramics end */
-/* metal */
 
-.metal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
+.object::-webkit-scrollbar {
+    height: 2px;
+    background-color: #ffffff;
 }
-/* metal end */
-/* wood */
 
-.wood {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
+.object::-webkit-scrollbar-thumb {
+    background-color: rgb(185, 185, 185);
 }
-/* wood end */
-/* product */
 
-.product {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
+.object > .item {
+    height: 50%;
+    margin: 0px 23px;
+    display: block;
+    text-decoration: none;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }
-/* product end */
-/* social */
+.object > .item:last-child {
+    padding-right: 10%;
+}
+.object > .item > figure {
+    height: 100%;
+}
+.object > .item > figure img {
+    height: 84%;
+    display: block;
+    margin: auto;
+    padding: 12%;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    transform: scale(1);
+    filter: grayscale(25%);
+}
 
-.social {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(img/bgBlur.png);
-    background-size: contain;
-    background-position-y: 0px;
-    background-position-x: 80px;
+.object > .item:hover > figure img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
-/* social end */
+.object > .item > figure > figcaption {
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 4;
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 0.1s;
+}
+.object > .item:hover > figure > figcaption {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* _____ 作品區共用 end _____ */
+
+.leather {
+    /* background-color: #ffa56326; */
+}

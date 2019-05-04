@@ -4,17 +4,20 @@
 }
 
 /* 強調黃： rgb(255, 204, 0); */
-
+html {
+    background-color: rgb(237, 235, 235);
+}
 body {
     position: relative;
     background-color: rgb(228, 228, 228);
 }
 
-/* prolio 註解掉相同樣式 */
+/* prolio 與index共用樣式,註解掉相同樣式 */
 .prolio {
     width: 100vw;
     height: 80px;
-    position: absolute;
+    position: fixed;
+    top: 0;
     transition: all 0.5s;
     display: flex;
     z-index: 5;
@@ -23,6 +26,9 @@ body {
 .prolio_small {
     display: flex;
     align-items: center;
+    height: unset;
+    background-color: unset;
+    margin-top: 11px;
 }
 /* 
 .prolio_small .logo {
@@ -34,7 +40,7 @@ body {
 .prolio_small .logo::before {
     content: '';
     position: absolute;
-    top: 32px;
+    top: 21px;
     left: 20px;
     border-right: 7px solid rgba(50, 50, 50, 0.3);
     border-top: 7px solid transparent;

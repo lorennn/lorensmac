@@ -15,18 +15,25 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
-        <aside id="aside">
+        <!-- 側邊欄 -->
+        <aside class="indexAside" id="aside">
             <ul>
-                <li>皮革</li>
-                <li>玻璃</li>
-                <li>陶瓷</li>
-                <li>金工</li>
-                <li>木工</li>
-                <li>產品<br />設計</li>
-                <li>社會<br />設計</li>
-                <p>t<br />o<br />p</p>
+                <li><a href="#leather">皮革</a></li>
+                <li><a href="#glass">玻璃</a></li>
+                <li><a href="#ceramics">陶瓷</a></li>
+                <li><a href="#metal">金工</a></li>
+                <li><a href="#wood">木工</a></li>
+                <li>
+                    <a href="#product">產品<br />設計</a>
+                </li>
+                <li>
+                    <a href="#social">社會<br />設計</a>
+                </li>
+                <a href="#" id="top">t<br />o<br />p</a>
             </ul>
         </aside>
+
+        <!-- prolio 介紹區 -->
         <section class="prolio" id="prolio">
             <div class="prolio_small" id="prolioS">
                 <a href="index.html" title="許云柔 | 歷年作品集">
@@ -44,6 +51,41 @@
                     <div>許云柔</div>
                     <a href="intro.html">個人簡歷及自傳<i class="fas fa-caret-right"></i></a>
                 </div>
+                <svg>
+                    <path
+                        d="M10 20L10 40A10 10,0 1 0 30 40L30 20A10 10,0 0 0 10 20Z"
+                        fill="none"
+                        stroke="rgba(255, 255, 255, 0.3)"
+                        stroke-width="2"
+                    />
+                    <path
+                        d="M20 21L20 28"
+                        fill="none"
+                        stroke="rgba(255, 255, 255, 0.8)"
+                        stroke-linecap="round"
+                        stroke-width="4"
+                    >
+                        <!-- 滑鼠位置 -->
+                        <animate
+                            attributeName="d"
+                            from="M20 18L20 25"
+                            to="M20 30L20 37"
+                            dur="4s"
+                            values="M20 18L20 25;  M20 26L20 33;M20 30L20 37;    M20 26L20 33; M20 22L20 29;     M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25"
+                            repeatCount="indefinite"
+                        />
+                        <!-- 滑鼠透明度 -->
+                        <animate
+                            attributeName="stroke"
+                            from="rgba(255, 255, 255, 0.8)"
+                            to="rgba(255, 255, 255, 0)"
+                            dur="4s"
+                            values="rgba(255, 255, 255, 0.5);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.2);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0.2);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3)"
+                            repeatCount="indefinite"
+                        />
+                    </path>
+                    <text x="1" y="65" fill="rgba(255, 255, 255, 0.5)">scroll</text>
+                </svg>
             </div>
             <div class="left" id="left">
                 <div>
@@ -52,13 +94,74 @@
                 </div>
             </div>
         </section>
-        <section class="leather" id="leather"></section>
-        <section class="glass" id="glass"></section>
-        <section class="ceramics" id="ceramics"></section>
-        <section class="metal" id="metal"></section>
-        <section class="wood" id="wood"></section>
-        <section class="product" id="product"></section>
-        <section class="social" id="social"></section>
+
+        <!-- 作品區 -->
+        <div id="sectionS">
+            <section class="object leather" id="leather">
+                <a class="item" href="leather1.html">
+                    <figure>
+                        <img src="img/bg.png" alt="bg.png" />
+                        <figcaption>相機包</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="leather1.html">
+                    <figure>
+                        <img src="img/bg.png" alt="bg.png" />
+                        <figcaption>相機包</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="leather1.html">
+                    <figure>
+                        <img src="img/bg.png" alt="bg.png" />
+                        <figcaption>相機包</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="leather1.html">
+                    <figure>
+                        <img src="img/bg.png" alt="bg.png" />
+                        <figcaption>相機包</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section class="object glass" id="glass">
+                <a class="item" href="glass1.html">
+                    <figure>
+                        <img src="img/glass1.png" alt="glass1.png" />
+                        <figcaption>玻璃</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="glass1.html">
+                    <figure>
+                        <img src="img/glass1.png" alt="glass1.png" />
+                        <figcaption>玻璃</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section class="object ceramics" id="ceramics">
+                <a class="item" href="ceramics1.html">
+                    <figure>
+                        <img src="img/ceramics1.png" alt="ceramics1.png" />
+                        <figcaption>陶瓷</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="ceramics1.html">
+                    <figure>
+                        <img src="img/ceramics1.png" alt="ceramics1.png" />
+                        <figcaption>陶瓷</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="ceramics1.html">
+                    <figure>
+                        <img src="img/ceramics1.png" alt="ceramics1.png" />
+                        <figcaption>陶瓷</figcaption>
+                    </figure>
+                </a>
+            </section>
+            <section class="object metal" id="metal"></section>
+            <section class="object wood" id="wood"></section>
+            <section class="object product" id="product"></section>
+            <section class="object social" id="social"></section>
+        </div>
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript">
@@ -78,14 +181,20 @@
 
             var prolioS = document.getElementById('prolioS');
 
+            var top = document.getElementById('top');
+
+            var sectionS = document.getElementById('sectionS');
+            var nowPos = '0';
+            var sectionEnd = '0';
+
             // 抓取螢幕高度，aside的padding-top
-            var windowH = window.screen.height;
+            var windowH = document.documentElement.clientHeight;
             aside.style.height = windowH;
             // console.log(windowH);
 
             // 捲軸向上超過視窗高度，prolio收合
             window.onscroll = function(e) {
-                console.log(window.scrollY);
+                console.log('scrollY', window.scrollY);
 
                 if (prolio.style.position != 'fixed') {
                     // 當prolio展開時
@@ -109,7 +218,7 @@
                         product.style.position = 'relative';
                         social.style.position = 'relative';
 
-                        leather.style.backgroundImage = 'url(img/bg.jpg)';
+                        // leather.style.backgroundImage = 'url(img/bg.jpg)';
                         prolioS.style.display = 'flex';
                         prolioS.style.height = '80px';
                         aside.style.display = 'block';
@@ -118,6 +227,114 @@
                     }
                 } else {
                     // 當prolio收起時
+
+                    // // 1.黏性視窗
+                    // setTimeout(function() {
+                    //     // priPos = window.scrollY;
+
+                    //     // // 上下滑動偵測
+                    //     // setInterval(function() {
+                    //     //     nowPos = window.scrollY;
+                    //     // }, 100);
+                    //     // rang = priPos - nowPos;
+
+                    //     switch (nowPos) {
+                    //         case '0':
+                    //             console.log('case0');
+
+                    //             if (window.scrollY > 1 && sectionEnd == '0') {
+                    //                 sectionEnd = '1';
+
+                    //                 sectionS.addEventListener(
+                    //                     'animationend',
+                    //                     function(e) {
+                    //                         sectionEnd = '0';
+                    //                         console.log('sectionEnd', sectionEnd);
+                    //                     },
+                    //                     false
+                    //                 );
+                    //                 sectionS.classList.add('down');
+
+                    //                 console.log('down');
+                    //                 nowPos = '1';
+                    //             }
+                    //             break;
+
+                    //         case '1':
+                    //             console.log('case1');
+                    //             if (window.scrollY > 1 && sectionEnd == '0') {
+                    //                 sectionEnd = '1';
+
+                    //                 // 放置確認動畫結束的參數
+                    //                 sectionS.addEventListener(
+                    //                     'animationend',
+                    //                     function(e) {
+                    //                         sectionEnd = '0';
+                    //                         console.log('sectionEnd', sectionEnd);
+                    //                     },
+                    //                     false
+                    //                 );
+                    //                 // 放置動畫
+                    //                 sectionS.classList.add('down1');
+                    //                 console.log('down1');
+
+                    //                 // 改變目前位置指標
+                    //                 nowPos = '2';
+                    //             }
+                    //             if (window.scrollY < 1 && sectionEnd == '0') {
+                    //                 sectionEnd = '1';
+
+                    //                 sectionS.addEventListener(
+                    //                     'animationend',
+                    //                     function(e) {
+                    //                         sectionEnd = '0';
+                    //                         console.log('sectionEnd', sectionEnd);
+                    //                     },
+                    //                     false
+                    //                 );
+                    //                 sectionS.classList.add('up1');
+                    //                 console.log('up1');
+                    //                 nowPos = '0';
+                    //             }
+                    //             break;
+
+                    //         case '2':
+                    //             console.log('case2');
+                    //             if (window.scrollY > 1 && sectionEnd == '0') {
+                    //                 sectionEnd = '1';
+
+                    //                 sectionS.addEventListener(
+                    //                     'animationend',
+                    //                     function(e) {
+                    //                         sectionEnd = '0';
+                    //                         console.log('sectionEnd', sectionEnd);
+                    //                     },
+                    //                     false
+                    //                 );
+                    //                 sectionS.classList.add('down2');
+                    //                 console.log('down2');
+                    //                 nowPos = '3';
+                    //             }
+                    //             if (window.scrollY < 1 && sectionEnd == '0') {
+                    //                 sectionEnd = '1';
+
+                    //                 sectionS.addEventListener(
+                    //                     'animationend',
+                    //                     function(e) {
+                    //                         sectionEnd = '0';
+                    //                         console.log('sectionEnd', sectionEnd);
+                    //                     },
+                    //                     false
+                    //                 );
+                    //                 sectionS.classList.add('up2');
+                    //                 console.log('up2');
+                    //                 nowPos = '0';
+                    //             }
+                    //             break;
+                    //     }
+                    // }, 1000);
+
+                    // 2.sideBar變化
                     if (window.scrollY > windowH * 0.5 && window.scrollY < windowH * 1.5) {
                         // 2.抓取視窗高度改變aside
                         // 有時間加上before小點換顏色
@@ -209,10 +426,17 @@
                 }
             };
 
+            top.addEventListener('click', function() {
+                window.scrollBy({
+                    top: top,
+                    // behavior: 'smooth',
+                });
+            });
+
             // 重新整理回到最高點
-            // window.onload = function() {
-            //     window.scrollY = 0;
-            // };
+            window.onload = function() {
+                // window.scrollY = 0;
+            };
         </script>
     </body>
 </html>
