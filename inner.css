@@ -104,7 +104,7 @@
 
 /* 下半部介紹 intro */
 .intro {
-    background-color: #f2f3f5;
+    background-color: #ebebeb;
     width: 100%;
     padding: 60px 0 200px 0px;
 }
@@ -124,6 +124,56 @@
     content: '/';
     padding-right: 15px;
 }
+.feat {
+    line-height: 3;
+    color: #555;
+    letter-spacing: 2px;
+}
+.feat::before {
+    content: '//';
+    padding-right: 15px;
+}
 .contain {
     line-height: 2;
+    text-indent: 30px;
 }
+
+/* 圖片樣式 colume_1 */
+
+.colume_1 {
+    margin: 40px auto;
+    width: 60%;
+}
+.colume_1 .img img {
+    width: 100%;
+}
+
+/* 圖片樣式 colume_2 */
+.colume_2 {
+    margin: auto;
+    width: 100%;
+    display: flex;
+}
+.colume_2 .img {
+    margin: 40px 0;
+}
+.colume_2 .img img {
+    width: 100%;
+}
+
+/* glass1 */
+.pic_light {
+    position: absolute;
+    z-index: 1;
+}
+.light {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.pic_light:hover .light {
+    opacity: 1;
+}
+.pic {
+    cursor: pointer;
+}
+/* glass1 end */

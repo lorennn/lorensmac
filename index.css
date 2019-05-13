@@ -7,17 +7,6 @@
 /* 強調黑：color: rgb(50, 50, 50); */
 /* 基調黑：color: rgba(50, 50, 50, 0.6); */
 
-/* ＿＿＿ scroll bar ＿＿＿ */
-/* bar的樣式 */
-::-webkit-scrollbar-thumb {
-    height: 2px;
-    background-color: #b46868;
-}
-
-/* 軌道的樣式 */
-::-webkit-scrollbar-track {
-}
-
 html {
     background-color: #f2f3f5;
     scroll-behavior: smooth;
@@ -32,7 +21,7 @@ body {
     width: 100px;
     height: 100vh;
     position: relative;
-    margin-left: 40px;
+    margin-left: 60px;
     z-index: 4;
 }
 .indexAside::before {
@@ -41,11 +30,11 @@ body {
     position: absolute;
     width: 250px;
     height: 100vh;
-    left: -40px;
+    left: -60px;
     background-image: linear-gradient(90deg, #f2f3f5 14%, transparent);
 }
 .indexAside ul::before {
-    content: '';
+    /* content: ''; */
     display: block;
     position: absolute;
     width: 1px;
@@ -71,16 +60,17 @@ body {
 }
 
 .indexAside ul li::before {
-    content: '';
+    content: '/';
     display: block;
     position: absolute;
     width: 5px;
     height: 5px;
-    border: 2px solid #eee;
+    /* border: 2px solid #eee;
     border-radius: 3px;
-    background-color: #aaa;
+    background-color: #aaa; */
     left: -14px;
-    margin-top: 9px;
+    /* margin-top: 9px; */
+    color: #aaa;
 }
 
 .indexAside ul li > a {
@@ -106,18 +96,18 @@ body {
 
 /* prolio 介紹區 */
 .prolio {
-    width: 100vw;
+    width: 100%;
     height: 201vh;
     position: absolute;
-    display: flex;
+    display: block;
     z-index: 5;
 }
 .prolio svg {
     width: 42px;
     height: 80px;
-    position: absolute;
-    bottom: 60px;
-    right: -40px;
+    display: block;
+    position: relative;
+    margin: 30px auto 0 auto;
     z-index: 1;
 }
 .prolio svg text {
@@ -131,10 +121,11 @@ body {
 }
 
 .prolio .right {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #aaa;
     position: relative;
-    width: 50vw;
-    height: 100vh;
+    width: 100%;
+    height: 50vh;
+    border-bottom: 1px #bebebe solid;
 }
 .prolio .right::after {
     content: '';
@@ -155,25 +146,34 @@ body {
     /* background-color: rgba(255, 255, 255, 0.6); */
 }
 .prolio .picName {
-    width: 30%;
-    margin-left: 55%;
-    margin-top: -20px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    /* margin-left: 55%;
+    margin-top: -20px; */
     position: relative;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     z-index: 1;
 }
-.prolio .picName img {
+.prolio .picName .pic {
+    width: 35%;
+}
+.prolio .picName .pic img {
     width: 100%;
-    padding: 30px;
     box-sizing: border-box;
     -webkit-filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
 }
-.prolio .picName div {
+
+.prolio .picName .name {
+    height: fit-content;
+    margin-left: 30px;
+}
+.prolio .picName .name div {
     font-size: 25px;
     color: white;
-    text-align: center;
     letter-spacing: 7px;
     line-height: 2.5;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
@@ -188,20 +188,19 @@ body {
     right: 0px;
     left: 0px;
 }
-.prolio .picName a {
+.prolio .picName .name a {
     text-decoration: none;
     color: rgb(255, 204, 0);
     text-align: center;
     letter-spacing: 6px;
     line-height: 2;
-    position: absolute;
-    padding-left: 10px;
+    position: relative;
     right: 0px;
     left: 0px;
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     transition: color 0.5s;
 }
-.prolio .picName .fa-caret-right {
+.prolio .picName .name .fa-caret-right {
     text-align: center;
     font-size: 18px;
     color: rgb(255, 204, 0);
@@ -210,17 +209,17 @@ body {
     transition: color 0.5s;
 }
 
-.prolio .picName:hover .fa-caret-right,
-.prolio .picName:hover a {
+.prolio .picName:hover .name .fa-caret-right,
+.prolio .picName:hover .name a {
     filter: none;
     transition: filter 0.5s;
 }
 
 .prolio .left {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #aaa;
     position: relative;
-    width: 50vw;
-    height: 100vh;
+    width: 100%;
+    height: 50vh;
     color: white;
     display: flex;
     align-content: center;
@@ -230,15 +229,16 @@ body {
 .prolio .left > div {
     height: 110px;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 150px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .prolio .left p {
     font-size: 22px;
     letter-spacing: 2px;
-    line-height: 4;
+    line-height: 2.5;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
@@ -394,7 +394,7 @@ body {
     display: flex;
     position: fixed;
     width: auto;
-    height: 100vh;
+    height: 95vh;
     background-size: contain;
     background-position-y: 0px;
     background-position-x: 80px;
@@ -420,11 +420,11 @@ body {
 }
 
 .object > .item {
-    height: 50%;
+    height: 70%;
     margin: 0px 23px;
     display: block;
     text-decoration: none;
-    top: 50%;
+    top: 53%;
     position: relative;
     transform: translateY(-50%);
 }
@@ -438,11 +438,11 @@ body {
     height: 84%;
     display: block;
     margin: auto;
-    padding: 12%;
+    /* padding: 12%; */
     box-sizing: border-box;
     transition: all 0.5s;
     transform: scale(1);
-    filter: grayscale(25%);
+    filter: grayscale(5%);
 }
 
 .object > .item:hover > figure img {

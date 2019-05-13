@@ -5,11 +5,11 @@
 
 /* 強調黃： rgb(255, 204, 0); */
 html {
-    background-color: rgb(237, 235, 235);
+    background-color: #f6f7f8;
 }
 body {
     position: relative;
-    background-color: rgb(228, 228, 228);
+    background-color: #f2f3f5;
 }
 
 /* prolio 與index共用樣式,註解掉相同樣式 */
