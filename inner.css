@@ -21,7 +21,7 @@
     color: #999;
 }
 .breadcrumb > ul > li {
-    color: #555;
+    color: #aaa;
     letter-spacing: 5.2px;
     margin: 16px 0;
     display: block;
@@ -31,17 +31,17 @@
 .breadcrumb > ul > li > a {
     letter-spacing: 5.2px;
     text-decoration: none;
-    color: #555;
+    color: #aaa;
 }
 .breadcrumb > ul > li > a:hover {
-    color: #333;
+    color: #555;
 }
 .breadcrumb > ul > li > a::after {
     content: '>';
     position: relative;
     left: 1px;
     bottom: -15px;
-    /* color: #999; */
+    color: #aaa;
 }
 
 /* 上半部介紹 main */
@@ -91,14 +91,16 @@
     content: '/';
     padding-right: 12px;
 }
-.main .cont .media {
+.main .cont .media,
+.main .cont .method {
     font-size: 15px;
     color: rgb(70, 70, 70);
     letter-spacing: 2px;
     line-height: 2;
 }
 
-.main .cont .media::before {
+.main .cont .media::before,
+.main .cont .method::before {
     content: '/';
     padding-right: 12px;
 }

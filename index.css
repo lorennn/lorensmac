@@ -387,6 +387,7 @@ body {
 /* _____ 作品區共用 _____ */
 #sectionS {
     overflow: hidden;
+    padding-top: 80px;
     transition: all 10s;
 }
 .object {
@@ -424,7 +425,7 @@ body {
     margin: 0px 23px;
     display: block;
     text-decoration: none;
-    top: 53%;
+    top: 46%;
     position: relative;
     transform: translateY(-50%);
 }
