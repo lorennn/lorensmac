@@ -17,10 +17,12 @@ body {
 }
 
 .indexAside {
-    display: none;
+    display: block;
+    /* display: none; */
+    position: fixed;
+    /* position: relative; */
     width: 100px;
     height: 100vh;
-    position: relative;
     margin-left: 60px;
     z-index: 4;
 }
@@ -97,8 +99,11 @@ body {
 /* prolio 介紹區 */
 .prolio {
     width: 100%;
-    height: 201vh;
-    position: absolute;
+    height: unset;
+    /* height: 201vh; */
+    position: fixed;
+    /* position: absolute; */
+    background-color: rgba(255, 255, 255, 0.3);
     display: block;
     z-index: 5;
 }
@@ -116,11 +121,12 @@ body {
     color: white;
 }
 
-.stopScroll {
+/* .stopScroll {
     overflow-y: hidden;
-}
+} */
 
 .prolio .right {
+    display: none;
     background-color: #aaa;
     position: relative;
     width: 100%;
@@ -216,12 +222,13 @@ body {
 }
 
 .prolio .left {
+    display: none;
+    /* display: flex; */
     background-color: #aaa;
     position: relative;
     width: 100%;
     height: 50vh;
     color: white;
-    display: flex;
     align-content: center;
     -webkit-align-content: center;
 }
@@ -251,10 +258,13 @@ body {
 
 .prolio_small {
     width: 100%;
-    height: 0px;
+    height: 80px;
+    /* height: 0px; */
     background-color: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    display: none;
+    position: fixed;
+    /* position: absolute; */
+    display: flex;
+    /* display: none; */
     align-items: center;
     transition: height 1s;
 }
@@ -393,7 +403,8 @@ body {
 .object {
     overflow-x: scroll;
     display: flex;
-    position: fixed;
+    position: relative;
+    /* position: fixed; */
     width: auto;
     height: 95vh;
     background-size: contain;
