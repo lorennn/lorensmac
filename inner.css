@@ -92,15 +92,17 @@
     padding-right: 12px;
 }
 .main .cont .media,
-.main .cont .method {
+.main .cont .method,
+.main .cont .size {
     font-size: 15px;
-    color: rgb(70, 70, 70);
+    color: rgb(95, 41, 41);
     letter-spacing: 2px;
     line-height: 2;
 }
 
 .main .cont .media::before,
-.main .cont .method::before {
+.main .cont .method::before,
+.main .cont .size::before {
     content: '/';
     padding-right: 12px;
 }
