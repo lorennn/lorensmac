@@ -62,6 +62,7 @@
 
 .main > figure > .picture > img {
     width: 100%;
+    vertical-align: top;
 }
 
 .main .cont {
@@ -176,13 +177,40 @@
     margin: 70px 0;
 }
 .colume_3 .img {
-    width: 60%;
+    width: 55%;
 }
 .colume_3 .img img {
     width: 100%;
+    vertical-align: middle;
 }
 .colume_3 p {
-    margin-left: 30px;
+    width: 40%;
+    font-size: 16px;
+    margin-left: 5%;
+    align-self: center;
+    line-height: 1.8;
+}
+
+/* 圖片樣式 colume_4 */
+.colume_4 {
+    margin: 50px 0;
+    width: 100%;
+}
+.colume_4 .wrap {
+    display: flex;
+    margin: 10px 0;
+}
+.colume_4 .img {
+    width: 40%;
+}
+.colume_4 .img img {
+    width: 100%;
+    vertical-align: middle;
+}
+.colume_4 p {
+    width: 55%;
+    font-size: 14px;
+    margin-left: 5%;
     align-self: center;
     line-height: 1.8;
 }
