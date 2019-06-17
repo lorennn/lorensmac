@@ -2,6 +2,51 @@
     margin: 0;
     padding: 0;
 }
+/* 麵包屑 */
+
+.breadcrumb {
+    position: fixed;
+    width: auto;
+    height: 100vh;
+    display: block;
+    margin-left: 40px;
+}
+.breadcrumb > ul {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-lr;
+    display: flex;
+}
+.breadcrumb > ul::before {
+    content: '::';
+    position: relative;
+    left: 2px;
+    color: #999;
+}
+.breadcrumb > ul > li {
+    color: #aaa;
+    letter-spacing: 5.2px;
+    margin: 16px 0;
+    display: block;
+    cursor: default;
+}
+
+.breadcrumb > ul > li > a {
+    letter-spacing: 5.2px;
+    text-decoration: none;
+    color: #aaa;
+}
+.breadcrumb > ul > li > a:hover {
+    color: #555;
+}
+.breadcrumb > ul > li > a::after {
+    content: '>';
+    position: relative;
+    left: 1px;
+    bottom: -15px;
+    color: #aaa;
+}
 
 /* 強調黃： rgb(255, 204, 0); */
 html {
@@ -107,3 +152,223 @@ body {
 } */
 
 /* prolio end */
+
+/* 上半部介紹 intro */
+.intro {
+}
+.introWrap {
+    width: 50%;
+    padding: 60px 0 0;
+    margin: 80px auto 0;
+}
+.self_R {
+    display: flex;
+}
+.self_head {
+    width: 300px;
+    height: 300px;
+    background-image: url(img/leather2.png);
+    background-size: cover;
+    background-position: center;
+}
+.self_name {
+    line-height: 82px;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+.self_education {
+    padding-left: 30px;
+    height: fit-content;
+    align-self: center;
+    font-size: 20px;
+}
+.education_list {
+    position: relative;
+    padding-left: 50px;
+    margin: 20px 0;
+}
+.education_list::before {
+    content: '';
+    width: 31px;
+    height: 31px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 7px;
+}
+.education_h::before {
+    background-image: url(img/intro/hight-01.png);
+}
+.education_c::before {
+    background-image: url(img/intro/collo-01.png);
+}
+.selfIntro {
+    padding: 20px;
+}
+
+/* 下半部介紹 */
+.gray_bg {
+    background-color: #ebebeb;
+    margin-bottom: 1px;
+}
+.experience,
+.skill,
+.language {
+    width: 50%;
+    margin: auto;
+    padding: 80px 0;
+}
+.title {
+    line-height: 3;
+    font-size: 19px;
+    letter-spacing: 10.2px;
+    color: #777;
+}
+.title::before {
+    content: '/';
+    padding-right: 15px;
+}
+.contain {
+    line-height: 0.8;
+    font-size: 17px;
+}
+.item {
+    display: flex;
+    padding: 5px 0;
+}
+.item_date {
+    width: 80px;
+    min-width: 80px;
+    letter-spacing: 1.2px;
+    text-align: center;
+    line-height: 1.43;
+    padding-top: 5px;
+    color: rgb(62, 156, 141);
+}
+.item_contact {
+    line-height: 1.8;
+    margin-left: 12px;
+    color: #777777;
+    font-size: 15px;
+}
+.list {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    color: #343434;
+}
+/* 技能 */
+.skill .item {
+    padding-bottom: 5px;
+}
+.item_R,
+.item_L {
+    width: 50%;
+}
+.item_R {
+    display: flex;
+}
+.item_name {
+    width: 20%;
+}
+.item_line {
+    width: 80%;
+    height: 8px;
+    align-self: center;
+    border-radius: 4px;
+    background-color: rgb(201, 201, 201);
+}
+.item_line::before {
+    content: '';
+    display: block;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgb(56, 134, 115);
+}
+.item_photo .item_line::before {
+    width: 80%;
+}
+.item_cut .item_line::before {
+    width: 70%;
+}
+.item_ps .item_line::before {
+    width: 80%;
+}
+.item_craft .item_line::before {
+    width: 80%;
+}
+.item .item_img {
+    align-self: center;
+    background-image: url(img/intro/ps.png);
+}
+.item_cut .item_img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(img/intro/imovie.png);
+    background-position: center;
+    background-size: cover;
+}
+.item_ps .item_img {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-image: url(img/intro/ps.png);
+    background-position: center;
+    background-size: cover;
+}
+.item_craft_inner {
+    justify-content: flex-end;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #555;
+}
+.item_craft_inner .item_R {
+    width: 40%;
+}
+.item_craft_inner .item_line {
+    height: 6px;
+    border-radius: 3px;
+}
+.item_craft_inner .item_line::before {
+    background-color: rgb(118, 199, 179);
+    height: 6px;
+    border-radius: 3px;
+}
+.item_craft_L .item_line::before {
+    width: 50%;
+}
+.item_craft_M .item_line::before {
+    width: 50%;
+}
+.item_craft_G .item_line::before {
+    width: 50%;
+}
+.item_craft_C .item_line::before {
+    width: 50%;
+}
+.item_craft_W .item_line::before {
+    width: 50%;
+}
+
+/* 語言 */
+.language .item {
+    padding: 5px 0;
+}
+.item_L {
+    display: flex;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+.item_L .item_img {
+    align-self: center;
+}
+.item_EN .item_line::before {
+    width: 75%;
+}
+.item_JP .item_line::before {
+    width: 60%;
+}
+.item_FR .item_line::before {
+    width: 15%;
+}
