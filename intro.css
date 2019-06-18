@@ -50,7 +50,7 @@
 
 /* 強調黃： rgb(255, 204, 0); */
 html {
-    background-color: #f6f7f8;
+    background-color: #fdfdfd;
 }
 body {
     position: relative;
@@ -66,7 +66,7 @@ body {
     transition: all 0.5s;
     display: flex;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 .prolio_small {
     display: flex;
@@ -172,9 +172,13 @@ body {
     background-position: center;
 }
 .self_name {
-    line-height: 82px;
-    font-size: 24px;
-    letter-spacing: 5px;
+    width: 174px;
+    height: 70px;
+    background-image: url(img/intro/sign.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    margin-bottom: 40px;
 }
 .self_education {
     padding-left: 30px;
@@ -264,12 +268,20 @@ body {
 .item_R,
 .item_L {
     width: 50%;
+    line-height: 2;
+}
+.item_L {
+    display: flex;
+    padding-left: 40px;
+    box-sizing: border-box;
+    letter-spacing: 1.2px;
 }
 .item_R {
     display: flex;
 }
 .item_name {
     width: 20%;
+    line-height: 2;
 }
 .item_line {
     width: 80%;
@@ -297,25 +309,28 @@ body {
 .item_craft .item_line::before {
     width: 80%;
 }
-.item .item_img {
-    align-self: center;
-    background-image: url(img/intro/ps.png);
+.item_L .item_img {
+    margin-right: 20px;
 }
-.item_cut .item_img {
+.skill .item_L .item_img::before {
+    content: '';
     width: 30px;
     height: 30px;
     display: inline-block;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.item_cut .item_img1::before {
     background-image: url(img/intro/imovie.png);
-    background-position: center;
-    background-size: cover;
 }
-.item_ps .item_img {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
+.item_cut .item_img2::before {
+    background-image: url(img/intro/PD.png);
+}
+.item_ps .item_img::before {
     background-image: url(img/intro/ps.png);
-    background-position: center;
-    background-size: cover;
 }
 .item_craft_inner {
     justify-content: flex-end;
@@ -355,20 +370,15 @@ body {
 .language .item {
     padding: 5px 0;
 }
-.item_L {
-    display: flex;
-    padding-left: 40px;
-    box-sizing: border-box;
-}
-.item_L .item_img {
+.language .item_L .item_img {
     align-self: center;
 }
-.item_EN .item_line::before {
+.language .item_EN .item_line::before {
     width: 75%;
 }
-.item_JP .item_line::before {
+.language .item_JP .item_line::before {
     width: 60%;
 }
-.item_FR .item_line::before {
+.language .item_FR .item_line::before {
     width: 15%;
 }
