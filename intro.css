@@ -75,13 +75,6 @@ body {
     background-color: unset;
     margin-top: 11px;
 }
-/* 
-.prolio_small .logo {
-    width: 50px;
-    height: 50px;
-    background-color: rgb(62, 156, 141);
-    margin-left: 50px;
-} */
 .prolio_small .logo::before {
     content: '';
     position: absolute;
@@ -95,67 +88,20 @@ body {
 .prolio_small a:hover ::before {
     border-right: 7px solid rgba(50, 50, 50, 0.6);
 }
-/*
-.prolio_small .name {
-    margin-left: 36px;
-    margin-top: -2px;
-}
-.prolio_small .name div {
-    letter-spacing: 6px;
-    line-height: 2;
-    font-size: 18px;
-}
-.prolio_small .name span {
-    letter-spacing: 3px;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.6);
-}*/
 .prolio_small a:last-child {
-    /* text-decoration: none;
-    color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-    letter-spacing: 7px;
-    line-height: 80px; */
     position: absolute;
     opacity: 0;
     cursor: default;
-    /* padding: 0 50px;
-    right: 0px;
-    right: 0px;
-    transition: color 0.5s; */
 }
 
 .prolio_small a:last-child::before {
     content: none;
-    /* position: absolute;
-    display: block;
-    left: 0px;
-    margin-top: 14px;
-    width: 1px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.2); */
+    background-color: rgba(0, 0, 0, 0.2);
 }
-/* .prolio_small .fa-caret-right {
-    text-align: center;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.3);
-    vertical-align: middle;
-    padding-left: 6px;
-    margin-top: -4px;
-    transition: color 0.5s;
-}
-.prolio_small a:hover {
-    color: rgba(0, 0, 0, 0.8);
-}
-.prolio_small a:hover .fa-caret-right {
-    color: rgba(0, 0, 0, 0.8);
-} */
 
 /* prolio end */
 
 /* 上半部介紹 intro */
-.intro {
-}
 .introWrap {
     width: 50%;
     padding: 60px 0 0;
@@ -208,6 +154,36 @@ body {
 }
 .selfIntro {
     padding: 20px;
+}
+/* 側邊說明圖 aside img */
+.asideImg {
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    right: 0%;
+    top: 0;
+    background-color: #ffffffd9;
+    box-shadow: -2px 0 15px #0000000f;
+    transform: translateX(120%);
+    transition: all 0.2s ease-in-out;
+}
+.asideImg_pic {
+    position: relative;
+    width: fit-content;
+    height: 60vh;
+    margin: 20vh auto 20vh;
+    box-shadow: -2px 12px 15px #0000000f;
+    transition: all 0.5s;
+}
+.asideImg_pic_img {
+    height: 100%;
+}
+.asideImg_pic_title {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    line-height: 35px;
 }
 
 /* 下半部介紹 */
@@ -381,4 +357,20 @@ body {
 }
 .language .item_FR .item_line::before {
     width: 15%;
+}
+
+.language .item_aside {
+    cursor: pointer;
+}
+.language .item_L .fa-external-link-alt {
+    line-height: 2;
+    padding: 0 5px;
+    font-size: 16px;
+    /* color: #aac289; */
+    color: #819e58;
+    opacity: 0.6;
+    transition: all 0.3s;
+}
+.language .item_L .fa-external-link-alt:hover {
+    opacity: 1;
 }

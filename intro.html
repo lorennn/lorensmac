@@ -57,6 +57,14 @@
             </div>
         </div>
 
+        <!-- 側邊說明圖 aside img -->
+        <div class="asideImg" id="asideImg">
+            <div class="asideImg_pic">
+                <img class="asideImg_pic_img" id="asideImg_pic_img" />
+                <div class="asideImg_pic_title" id="asideImg_pic_title"></div>
+            </div>
+        </div>
+
         <div class="gray_bg">
             <!-- 經歷 -->
             <div class="experience">
@@ -244,7 +252,9 @@
                             <p class="item_name">英語</p>
                             <p class="item_line"></p>
                         </div>
-                        <div class="item_L">多益750分</div>
+                        <div class="item_L item_aside js_itemEN_img">
+                            多益730分<i class="fas fa-external-link-alt"></i>
+                        </div>
                     </div>
 
                     <div class="item item_JP">
@@ -252,7 +262,9 @@
                             <p class="item_name">日語</p>
                             <p class="item_line"></p>
                         </div>
-                        <div class="item_L">日檢JLPT N3通過</div>
+                        <div class="item_L item_aside js_itemJP_img">
+                            日檢JLPT N3通過<i class="fas fa-external-link-alt"></i>
+                        </div>
                     </div>
 
                     <div class="item item_FR">
@@ -265,5 +277,40 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            // window.onload = function() {
+            var itemAside = document.getElementsByClassName('item_aside');
+            var asideImg = document.getElementById('asideImg');
+            var asidePicImg = document.getElementById('asideImg_pic_img');
+            var asidePicTitle = document.getElementById('asideImg_pic_title');
+
+            for (i = 0; i < itemAside.length; i++) {
+                // 開啟側邊說明圖
+                itemAside[i].onmouseover = function() {
+                    asideImg.style.transform = 'translateX(0%)';
+
+                    if (this.classList.contains('js_itemEN_img')) {
+                        asidePicImg.src = 'img/intro/TOEIC.png';
+                        asidePicTitle.innerText = '多益 750分';
+                    }
+                    if (this.classList.contains('js_itemJP_img')) {
+                        asidePicImg.src = 'img/intro/JP.png';
+                        asidePicTitle.innerText = '日檢JLPT N3通過';
+                    }
+                };
+                // 關閉側邊說明圖
+                itemAside[i].onmouseout = function() {
+                    asideImg.style.transform = 'translateX(120%)';
+                };
+            }
+
+            // EN.onmouseover = function() {
+            //     console.log(':D');
+            //     asidePicImg.src = 'img/intro/TOEIC.png';
+            // };
+
+            // };
+        </script>
     </body>
 </html>
