@@ -191,12 +191,18 @@ body {
     background-color: #ebebeb;
     margin-bottom: 1px;
 }
-.experience,
-.skill,
-.language {
-    width: 50%;
+.gray_bg.skill_bg {
+    padding: 20px 0 100px;
+}
+.experience {
+    width: 70%;
     margin: auto;
     padding: 80px 0;
+}
+.skill,
+.language {
+    width: 70%;
+    margin: auto;
 }
 .title {
     line-height: 3;
@@ -237,40 +243,51 @@ body {
     font-weight: bold;
     color: #343434;
 }
+/* 經歷 */
+.experience .contain {
+    width: 50%;
+}
+.skill-lang {
+    display: flex;
+    width: 60%;
+    margin: 0 auto 0 15%;
+}
 /* 技能 */
 .skill .item {
     padding-bottom: 5px;
 }
 .item_R,
 .item_L {
-    width: 50%;
-    line-height: 2;
+    line-height: 1.4;
 }
 .item_L {
+    width: 60%;
     display: flex;
     padding-left: 40px;
     box-sizing: border-box;
     letter-spacing: 1.2px;
 }
 .item_R {
+    width: 35%;
     display: flex;
 }
 .item_name {
-    width: 20%;
-    line-height: 2;
+    width: 30%;
+    line-height: 1.4;
+    padding-right: 10px;
 }
 .item_line {
-    width: 80%;
-    height: 8px;
+    width: 70%;
+    height: 4px;
     align-self: center;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: rgb(201, 201, 201);
 }
 .item_line::before {
     content: '';
     display: block;
-    height: 8px;
-    border-radius: 4px;
+    height: 4px;
+    border-radius: 2px;
     background-color: rgb(56, 134, 115);
 }
 .item_photo .item_line::before {
@@ -290,8 +307,8 @@ body {
 }
 .skill .item_L .item_img::before {
     content: '';
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     display: inline-block;
     left: 0;
     background-position: center;
@@ -363,7 +380,7 @@ body {
     cursor: pointer;
 }
 .language .item_L .fa-external-link-alt {
-    line-height: 2;
+    line-height: 1.4;
     padding: 0 5px;
     font-size: 16px;
     /* color: #aac289; */

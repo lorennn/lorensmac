@@ -476,5 +476,42 @@ body {
 .object > .item:hover > figure > figcaption {
     color: rgba(0, 0, 0, 0.8);
 }
-
+/* photo */
+.object.photography figure {
+    position: relative;
+}
+.object.photography p.photoImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    z-index: 1;
+}
+.object.photography img.frame {
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.object.photography > .item:hover img {
+    filter: unset;
+    transform: unset;
+}
+.object.photography p.photoImg1 {
+    background-image: url(img/photo1.png);
+}
+.object.photography p.photoImg2 {
+    background-image: url(img/photo2.png);
+}
+.object.photography p.photoImg3 {
+    background-image: url(img/photo3.png);
+}
+.object.photography p.photoImg4 {
+    background-image: url(img/photo4.png);
+}
+.object.photography p.photoImg5 {
+    background-image: url(img/photo5.png);
+}
+.object.photography p.photoImg6 {
+    background-image: url(img/photo6.png);
+}
+}
 /* _____ 作品區共用 end _____ */
