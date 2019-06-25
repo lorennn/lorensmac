@@ -513,5 +513,30 @@ body {
 .object.photography p.photoImg6 {
     background-image: url(img/photo6.png);
 }
+/* film */
+.object.film figure {
+    position: relative;
+}
+.object.film p.filmImg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    z-index: 1;
+}
+.object.film img.frame {
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.object.film > .item {
+    margin: 0px 40px;
+    height: 50%;
+}
+.object.film > .item:hover img {
+    filter: unset;
+    transform: unset;
+}
+.object.film p.filmImg1 {
+    background-image: url(img/film1.png);
 }
 /* _____ 作品區共用 end _____ */
