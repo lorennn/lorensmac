@@ -19,8 +19,8 @@
         <!-- 側邊欄 -->
         <aside class="indexAside" id="aside">
             <ul>
-                <li><a href="#film" title="影片">影片</a></li>
                 <li><a href="#photography" title="攝影">攝影</a></li>
+                <li><a href="#film" title="影片">影片</a></li>
                 <li><a href="#design" title="設計">設計</a></li>
                 <li><a href="#leather" title="皮革">皮革</a></li>
                 <li><a href="#metal" title="金工">金工</a></li>
@@ -97,59 +97,26 @@
             </div>
         </section>
 
+        <!-- film lightBox -->
+        <section class="film_lightBox" id="js_lightBox">
+            <div class="lightBox_wrap">
+                <i class="fas fa-times" id="js_close"></i>
+                <div class="lightBox_play"></div>
+                <iframe
+                    id="js_iframe"
+                    class="lightBox_iframe"
+                    src="https://www.youtube.com/embed/Yw5BfOnv4mA"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
         <!-- 作品區 -->
         <div id="sectionS">
-            <section class="object film" id="film">
-                <a class="item" href="photo1.html">
-                    <figure>
-                        <p class="filmImg filmImg1">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>NIKON FE2</figcaption>
-                    </figure>
-                </a>
-                <a class="item" href="photo2.html">
-                    <figure>
-                        <p class="filmImg filmImg2">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>聯展台南</figcaption>
-                    </figure>
-                </a>
-                <a class="item" href="photo3.html">
-                    <figure>
-                        <p class="filmImg filmImg3">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>成果展</figcaption>
-                    </figure>
-                </a>
-                <a class="item" href="photo4.html">
-                    <figure>
-                        <p class="filmImg filmImg4">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>玩具相機</figcaption>
-                    </figure>
-                </a>
-                <a class="item" href="photo5.html">
-                    <figure>
-                        <p class="filmImg filmImg5">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>B&W-135</figcaption>
-                    </figure>
-                </a>
-                <a class="item" href="photo6.html">
-                    <figure>
-                        <p class="filmImg filmImg6">
-                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
-                        </p>
-                        <figcaption>舞二班展側拍</figcaption>
-                    </figure>
-                </a>
-            </section>
-
             <section class="object photography" id="photography">
                 <a class="item" href="photo1.html">
                     <figure>
@@ -197,6 +164,49 @@
                             <img class="frame" src="img/frame.png" alt="frame.png" />
                         </p>
                         <figcaption>舞二班展側拍</figcaption>
+                    </figure>
+                </a>
+            </section>
+
+            <section class="object film" id="film">
+                <a class="item" id="js_film_01">
+                    <figure>
+                        <p class="filmImg filmImg1">
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>三八地 Somebody Q&A</figcaption>
+                    </figure>
+                </a>
+                <a class="item" id="js_film_02">
+                    <figure>
+                        <p class="filmImg filmImg2">
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>聯展台南</figcaption>
+                    </figure>
+                </a>
+                <a class="item" id="js_film_03">
+                    <figure>
+                        <p class="filmImg filmImg3">
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>成果展</figcaption>
+                    </figure>
+                </a>
+                <a class="item" id="js_film_04">
+                    <figure>
+                        <p class="filmImg filmImg4">
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>玩具相機</figcaption>
+                    </figure>
+                </a>
+                <a class="item" id="js_film_05">
+                    <figure>
+                        <p class="filmImg filmImg5">
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>B&W-135</figcaption>
                     </figure>
                 </a>
             </section>
@@ -390,7 +400,7 @@
 
             // 捲軸向上超過視窗高度，prolio收合
             window.onscroll = function(e) {
-                console.log('scrollY', window.scrollY);
+                // console.log('scrollY', window.scrollY);
 
                 if (prolio.style.position != 'fixed') {
                     // 當prolio展開時
@@ -493,6 +503,46 @@
                     // behavior: 'smooth',
                 });
             });
+
+            // film lightBox open
+            $('#js_film_01').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/Yw5BfOnv4mA');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+            $('#js_film_02').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/Hrp6HTrx-Ew');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+            $('#js_film_03').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/gYiKcbv5flg');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+            $('#js_film_04').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/_4lVsOsiHD8');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+            $('#js_film_05').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/ft3HxzowX7o');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+
+            // film lightBox close
+            $('#js_close').click(function() {
+                $('#js_lightBox').css('opacity', '0');
+                lightBoxClose();
+            });
+
+            function lightBoxClose() {
+                setTimeout(function() {
+                    console.log(':D');
+                    $('#js_lightBox').css('display', 'none');
+                }, 500);
+            }
 
             // 重新整理回到最高點
             window.onload = function() {

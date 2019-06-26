@@ -339,65 +339,37 @@ body {
 .prolio_small > a:last-child:hover .fa-caret-right {
     color: rgba(0, 0, 0, 0.8);
 }
-
 /* prolio end */
 
-/* 沒用的整屏滾動 */
-/* .down {
-    animation: down 0.5s ease-in-out forwards;
+/* _____ lightBox _____ */
+.film_lightBox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #323232;
+    z-index: 10;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
-@keyframes down {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(-14.28%);
-    }
+.film_lightBox .lightBox_wrap {
+    position: relative;
+    width: 60vw;
+    height: 70vh;
+    margin: 15vh auto 15vh;
 }
-.up1 {
-    animation: up1 0.5s ease-in-out forwards;
+.film_lightBox .fa-times {
+    position: absolute;
+    font-size: 18px;
+    top: -30px;
+    right: 0px;
+    cursor: pointer;
+    z-index: 11;
+    color: #aac289;
 }
-.down1 {
-    animation: down1 0.5s ease-in-out forwards;
+.film_lightBox .lightBox_play {
 }
-@keyframes up1 {
-    0% {
-        transform: translateY(-14.28%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-@keyframes down1 {
-    0% {
-        transform: translateY(-14.28%);
-    }
-    100% {
-        transform: translateY(-28.56%);
-    }
-}
-.up2 {
-    animation: up2 0.5s ease-in-out forwards;
-}
-.down2 {
-    animation: down2 0.5s ease-in-out forwards;
-}
-@keyframes up2 {
-    0% {
-        transform: translateY(-28.56%);
-    }
-    100% {
-        transform: translateY(-14.28%);
-    }
-}
-@keyframes down2 {
-    0% {
-        transform: translateY(-28.56%);
-    }
-    100% {
-        transform: translateY(-42.84%);
-    }
-} */
+/* _____ lightBox end _____ */
 
 /* _____ 作品區共用 _____ */
 #sectionS {
@@ -520,7 +492,7 @@ body {
 .object.film p.filmImg {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 60%;
+    background-size: 70%;
     z-index: 1;
 }
 .object.film img.frame {
@@ -538,5 +510,17 @@ body {
 }
 .object.film p.filmImg1 {
     background-image: url(img/film1.png);
+}
+.object.film p.filmImg2 {
+    background-image: url(img/film2.png);
+}
+.object.film p.filmImg3 {
+    background-image: url(img/film3.png);
+}
+.object.film p.filmImg4 {
+    background-image: url(img/film4.png);
+}
+.object.film p.filmImg5 {
+    background-image: url(img/film5.png);
 }
 /* _____ 作品區共用 end _____ */
