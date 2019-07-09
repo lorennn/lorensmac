@@ -367,8 +367,6 @@ body {
     z-index: 11;
     color: #aac289;
 }
-.film_lightBox .lightBox_play {
-}
 /* _____ lightBox end _____ */
 
 /* _____ 作品區共用 _____ */
@@ -490,15 +488,45 @@ body {
     position: relative;
 }
 .object.film p.filmImg {
+    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
     z-index: 1;
+    cursor: pointer;
 }
 .object.film img.frame {
     background-position: center;
     background-size: cover;
     z-index: -1;
+    position: relative;
+}
+.object.film p.filmImg .filmPlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 14.5%;
+    z-index: -2;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.object.film p.filmImg .filmPlay::before {
+    position: absolute;
+    display: block;
+    content: '';
+    border-left: 36px solid #fff;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.object.film p.filmImg:hover .filmPlay {
+    opacity: 1;
 }
 .object.film > .item {
     margin: 0px 40px;

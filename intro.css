@@ -195,14 +195,14 @@ body {
     padding: 20px 0 100px;
 }
 .experience {
-    width: 70%;
+    width: 50%;
     margin: auto;
     padding: 80px 0;
 }
 .skill,
 .language {
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    margin: 20px auto;
 }
 .title {
     line-height: 3;
@@ -245,12 +245,12 @@ body {
 }
 /* 經歷 */
 .experience .contain {
-    width: 50%;
+    width: 100%;
 }
 .skill-lang {
-    display: flex;
-    width: 60%;
-    margin: 0 auto 0 15%;
+    /* display: flex; */
+    width: 50%;
+    margin: 0 auto;
 }
 /* 技能 */
 .skill .item {
