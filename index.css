@@ -26,14 +26,15 @@ body {
     z-index: 100;
     text-align: center;
     box-sizing: border-box;
-    padding: calc(50vh - 50px) calc(50vw - 90px);
+    padding: calc(50vh - 50px) calc(50vw - 155px);
     transition: all 0.5s ease;
     opacity: 1;
 }
 .scrollDown p {
     color: #fff;
-    width: 180px;
+    width: 310px;
     letter-spacing: 4px;
+    line-height: 1.8;
 }
 .scrollDown svg {
     position: relative;

@@ -43,6 +43,7 @@
                 <!-- <text x="1" y="65" fill="rgba(0, 0, 0, 0.5)">scroll</text> -->
             </svg>
             <p>向下滑動看更多作品</p>
+            <p>建議使用chrome以獲得最佳體驗</p>
         </div>
 
         <!-- 側邊欄 -->
@@ -122,7 +123,7 @@
                 <div class="lightBox_play"></div>
                 <iframe
                     id="js_iframe"
-                    class="lightBox_iframe"
+                    class="lightBox_iframe youtube-video"
                     src="https://www.youtube.com/embed/Yw5BfOnv4mA"
                     width="100%"
                     height="100%"
@@ -141,7 +142,7 @@
                         <p class="photoImg photoImg0">
                             <img class="frame" src="img/frame.png" alt="frame.png" />
                         </p>
-                        <figcaption>小孩與狗</figcaption>
+                        <figcaption>毛 小孩</figcaption>
                     </figure>
                 </a>
                 <a class="item" href="photo2.html">
@@ -201,7 +202,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>新一代設計展<br />「產品設計類入圍「出格」</figcaption>
+                        <figcaption>新一代設計展<br />產品設計類入圍「出格」</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_02">
@@ -228,7 +229,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>工藝系班展<br />幕後花絮影片</figcaption>
+                        <figcaption>工藝系班展<br />「三八地 Somebody」幕後花絮影片</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_01">
@@ -237,7 +238,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>工藝系班展<br />三八地 Somebody Q&A</figcaption>
+                        <figcaption>工藝系班展<br />「三八地 Somebody」Q&A</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_05">
@@ -246,7 +247,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>工藝系耶誕晚會之XMAS壞耶誕<br />活動開場影片</figcaption>
+                        <figcaption>工藝系耶誕晚會<br />「XMAS壞耶誕」活動開場影片</figcaption>
                     </figure>
                 </a>
             </section>
@@ -511,7 +512,8 @@
 
             // film lightBox open
             $('#js_film_01').click(function() {
-                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/Yw5BfOnv4mA');
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/Yw5BfOnv4mA?autoplay=1');
+                $('#js_iframe').play();
                 $('#js_lightBox').css('display', 'block');
                 $('#js_lightBox').css('opacity', '1');
             });
@@ -543,7 +545,9 @@
 
             // film lightBox close
             $('#js_close').click(function() {
-                $('#js_lightBox').css('opacity', '0');
+                $('#js_lightBox').css('display', 'none');
+                // $('#js_lightBox').css('opacity', '0');
+                $('#js_iframe').stopVideo();
                 lightBoxClose();
             });
 
