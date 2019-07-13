@@ -11,17 +11,38 @@ html {
     background-color: #fdfdfd;
     scroll-behavior: smooth;
     /* transition: all 0.5s; */
+    font-family: Microsoft JhengHei;
 }
 body {
     position: relative;
     background-color: #f2f3f5;
+    position: relative;
 }
-
+.scrollDown {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-align: center;
+    box-sizing: border-box;
+    padding: calc(50vh - 50px) calc(50vw - 90px);
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+.scrollDown p {
+    color: #fff;
+    width: 180px;
+    letter-spacing: 4px;
+}
+.scrollDown svg {
+    position: relative;
+    width: 43px;
+    height: 58px;
+}
 .indexAside {
     display: block;
-    /* display: none; */
     position: fixed;
-    /* position: relative; */
     width: 100px;
     height: 100vh;
     margin-left: 60px;
@@ -46,20 +67,25 @@ body {
     left: -10px;
     top: 12px;
 }
-
 .indexAside ul {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 .indexAside ul li {
-    font-size: 16px;
+    font-size: 14px;
     list-style: none;
     margin: 20px 0;
-    line-height: 1.5;
+    line-height: 1.2;
     letter-spacing: 2px;
-    transition: all 0.5s;
     cursor: pointer;
+}
+.indexAside ul li a {
+    transition: all 0.5s ease;
+}
+.indexAside ul li:first-child a {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .indexAside ul li::before {
@@ -73,15 +99,15 @@ body {
     background-color: #aaa; */
     left: -14px;
     /* margin-top: 9px; */
-    color: #aaa;
+    color: rgba(0, 0, 0, 0.1);
 }
 
 .indexAside ul li > a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.1);
 }
 .indexAside ul li > a:hover {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.6);
 }
 .indexAside > ul > a {
     text-decoration: none;
@@ -95,6 +121,11 @@ body {
 }
 .indexAside > ul > a:hover {
     color: rgba(0, 0, 0, 0.8);
+}
+.indexAside_scroll {
+    writing-mode: vertical-lr;
+    font-size: 12px;
+    color: #bbb;
 }
 
 /* prolio 介紹區 */
@@ -372,7 +403,7 @@ body {
 /* _____ 作品區共用 _____ */
 #sectionS {
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 20px;
     transition: all 10s;
 }
 .object {
@@ -446,6 +477,9 @@ body {
 .object > .item:hover > figure > figcaption {
     color: rgba(0, 0, 0, 0.8);
 }
+.object.film > .item > figure > figcaption {
+    line-height: 1.8;
+}
 /* photo */
 .object.photography figure {
     position: relative;
@@ -464,6 +498,9 @@ body {
 .object.photography > .item:hover img {
     filter: unset;
     transform: unset;
+}
+.object.photography p.photoImg0 {
+    background-image: url(img/photo0.png);
 }
 .object.photography p.photoImg1 {
     background-image: url(img/photo1.png);
@@ -550,5 +587,8 @@ body {
 }
 .object.film p.filmImg5 {
     background-image: url(img/film5.png);
+}
+.object.film p.filmImg6 {
+    background-image: url(img/film6.png);
 }
 /* _____ 作品區共用 end _____ */

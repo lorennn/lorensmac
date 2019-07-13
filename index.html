@@ -16,18 +16,47 @@
         <link rel="stylesheet" href="index.css" />
     </head>
     <body>
+        <!-- 下滑提示 -->
+        <div class="scrollDown js_scrollDown">
+            <svg>
+                <path d="M10 20L10 40A10 10,0 1 0 30 40L30 20A10 10,0 0 0 10 20Z" fill="none" stroke="rgba(255, 255, 255, 255.3)" stroke-width="2" />
+                <path d="M20 21L20 28" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-linecap="round" stroke-width="4">
+                    <!-- 滑鼠位置 -->
+                    <animate
+                        attributeName="d"
+                        from="M20 18L20 25"
+                        to="M20 30L20 37"
+                        dur="4s"
+                        values="M20 18L20 25;  M20 26L20 33;M20 30L20 37;    M20 26L20 33; M20 22L20 29;     M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25;M20 18L20 25"
+                        repeatCount="indefinite"
+                    />
+                    <!-- 滑鼠透明度 -->
+                    <animate
+                        attributeName="stroke"
+                        from="rgba(255, 255, 255, 0.8)"
+                        to="rgba(255, 255, 255, 0)"
+                        dur="4s"
+                        values="rgba(255, 255, 255, 0.5);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.2);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0);rgba(255, 255, 255, 0.2);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3);rgba(255, 255, 255, 0.3)"
+                        repeatCount="indefinite"
+                    />
+                </path>
+                <!-- <text x="1" y="65" fill="rgba(0, 0, 0, 0.5)">scroll</text> -->
+            </svg>
+            <p>向下滑動看更多作品</p>
+        </div>
+
         <!-- 側邊欄 -->
         <aside class="indexAside" id="aside">
             <ul>
-                <li><a href="#photography" title="攝影">攝影</a></li>
-                <li><a href="#film" title="影片">影片</a></li>
-                <li><a href="#design" title="設計">設計</a></li>
-                <li><a href="#leather" title="皮革">皮革</a></li>
-                <li><a href="#metal" title="金工">金工</a></li>
-                <li><a href="#glass" title="玻璃">玻璃</a></li>
-                <li><a href="#ceramics" title="陶瓷">陶瓷</a></li>
-                <li><a href="#wood" title="木工">木工</a></li>
-                <a href="#" id="top">t<br />o<br />p</a>
+                <li class="js_indexAside_type js_type_photo"><a href="#photography" title="攝影">攝影</a></li>
+                <li class="js_indexAside_type js_type_film"><a href="#film" title="影片">影片</a></li>
+                <!-- <li><a href="#design" title="設計">設計</a></li> -->
+                <li class="js_indexAside_type js_type_leather"><a href="#leather" title="皮革">皮革</a></li>
+                <li class="js_indexAside_type js_type_metal"><a href="#metal" title="金工">金工</a></li>
+                <li class="js_indexAside_type js_type_glass"><a href="#glass" title="玻璃">玻璃</a></li>
+                <li class="js_indexAside_type js_type_ceramics"><a href="#ceramics" title="陶瓷">陶瓷</a></li>
+                <li class="js_indexAside_type js_type_wood"><a href="#wood" title="木工">木工</a></li>
+                <!-- <a href="#" id="top">t<br />o<br />p</a> -->
             </ul>
         </aside>
 
@@ -59,19 +88,8 @@
                     <p>歷年作品集</p>
                     <span>YJ's Work Collection</span>
                     <svg>
-                        <path
-                            d="M10 20L10 40A10 10,0 1 0 30 40L30 20A10 10,0 0 0 10 20Z"
-                            fill="none"
-                            stroke="rgba(255, 255, 255, 0.3)"
-                            stroke-width="2"
-                        />
-                        <path
-                            d="M20 21L20 28"
-                            fill="none"
-                            stroke="rgba(255, 255, 255, 0.8)"
-                            stroke-linecap="round"
-                            stroke-width="4"
-                        >
+                        <path d="M10 20L10 40A10 10,0 1 0 30 40L30 20A10 10,0 0 0 10 20Z" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="2" />
+                        <path d="M20 21L20 28" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-linecap="round" stroke-width="4">
                             <!-- 滑鼠位置 -->
                             <animate
                                 attributeName="d"
@@ -118,6 +136,22 @@
         <!-- 作品區 -->
         <div id="sectionS">
             <section class="object photography" id="photography">
+                <a class="item" href="photo0.html">
+                    <figure>
+                        <p class="photoImg photoImg0">
+                            <img class="frame" src="img/frame.png" alt="frame.png" />
+                        </p>
+                        <figcaption>小孩與狗</figcaption>
+                    </figure>
+                </a>
+                <a class="item" href="photo2.html">
+                    <figure>
+                        <p class="photoImg photoImg2">
+                            <img class="frame" src="img/frame.png" alt="frame.png" />
+                        </p>
+                        <figcaption>聯合攝影展</figcaption>
+                    </figure>
+                </a>
                 <a class="item" href="photo1.html">
                     <figure>
                         <p class="photoImg photoImg1">
@@ -126,20 +160,12 @@
                         <figcaption>NIKON FE2</figcaption>
                     </figure>
                 </a>
-                <a class="item" href="photo2.html">
-                    <figure>
-                        <p class="photoImg photoImg2">
-                            <img class="frame" src="img/frame.png" alt="frame.png" />
-                        </p>
-                        <figcaption>聯展台南</figcaption>
-                    </figure>
-                </a>
                 <a class="item" href="photo3.html">
                     <figure>
                         <p class="photoImg photoImg3">
                             <img class="frame" src="img/frame.png" alt="frame.png" />
                         </p>
-                        <figcaption>成果展</figcaption>
+                        <figcaption>學年成果展</figcaption>
                     </figure>
                 </a>
                 <a class="item" href="photo4.html">
@@ -147,7 +173,7 @@
                         <p class="photoImg photoImg4">
                             <img class="frame" src="img/frame.png" alt="frame.png" />
                         </p>
-                        <figcaption>玩具相機</figcaption>
+                        <figcaption>FUJI FILM</figcaption>
                     </figure>
                 </a>
                 <a class="item" href="photo5.html">
@@ -163,19 +189,19 @@
                         <p class="photoImg photoImg6">
                             <img class="frame" src="img/frame.png" alt="frame.png" />
                         </p>
-                        <figcaption>舞二班展側拍</figcaption>
+                        <figcaption>舞蹈系班展</figcaption>
                     </figure>
                 </a>
             </section>
 
             <section class="object film" id="film">
-                <a class="item" id="js_film_01">
+                <a class="item" id="js_film_06">
                     <figure>
-                        <p class="filmImg filmImg1">
+                        <p class="filmImg filmImg6">
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>三八地 Somebody Q&A</figcaption>
+                        <figcaption>新一代設計展<br />「產品設計類入圍「出格」</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_02">
@@ -184,7 +210,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>聯展台南</figcaption>
+                        <figcaption>工藝系系展<br />「缺 」開幕影片</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_03">
@@ -193,7 +219,7 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>成果展</figcaption>
+                        <figcaption>工藝系班展<br />「三八地 Somebody」開幕影片</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_04">
@@ -202,7 +228,16 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>玩具相機</figcaption>
+                        <figcaption>工藝系班展<br />幕後花絮影片</figcaption>
+                    </figure>
+                </a>
+                <a class="item" id="js_film_01">
+                    <figure>
+                        <p class="filmImg filmImg1">
+                            <span class="filmPlay"></span>
+                            <img class="frame" src="img/ipad.png" alt="ipad.png" />
+                        </p>
+                        <figcaption>工藝系班展<br />三八地 Somebody Q&A</figcaption>
                     </figure>
                 </a>
                 <a class="item" id="js_film_05">
@@ -211,19 +246,19 @@
                             <span class="filmPlay"></span>
                             <img class="frame" src="img/ipad.png" alt="ipad.png" />
                         </p>
-                        <figcaption>B&W-135</figcaption>
+                        <figcaption>工藝系耶誕晚會之XMAS壞耶誕<br />活動開場影片</figcaption>
                     </figure>
                 </a>
             </section>
 
-            <section class="object design" id="design">
+            <!-- <section class="object design" id="design">
                 <a class="item" href="wood2.html">
                     <figure>
                         <img src="img/wood2.png" alt="wood2.png" />
                         <figcaption>條紋木盒</figcaption>
                     </figure>
                 </a>
-            </section>
+            </section> -->
 
             <section class="object leather" id="leather">
                 <a class="item" href="leather1.html">
@@ -402,103 +437,68 @@
             var windowH = document.documentElement.clientHeight;
             aside.style.height = windowH;
             // console.log(windowH);
-
+            $('.js_scrollDown').click(function() {
+                $(this).remove();
+            });
             // 捲軸向上超過視窗高度，prolio收合
             window.onscroll = function(e) {
                 // console.log('scrollY', window.scrollY);
 
-                if (prolio.style.position != 'fixed') {
-                    // 當prolio展開時
+                $('.js_scrollDown').remove();
+
+                // 2.sideBar變化
+                if (window.scrollY > windowH * 0.5 && window.scrollY < windowH * 1.5) {
+                    // 2.抓取視窗高度改變aside
+                    // 有時間加上before小點換顏色
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_film')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                } else if (window.scrollY > windowH * 1.5 && window.scrollY < windowH * 2.5) {
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_leather')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                } else if (window.scrollY > windowH * 2.5 && window.scrollY < windowH * 3.5) {
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_metal')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                } else if (window.scrollY > windowH * 3.5 && window.scrollY < windowH * 4.5) {
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_glass')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                } else if (window.scrollY > windowH * 4.5 && window.scrollY < windowH * 5.5) {
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_ceramics')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                } else if (window.scrollY > windowH * 5.5) {
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_wood')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
+                    // aside.firstElementChild.lastElementChild.style.fontSize = '20px'; //top放大或加上呼吸效果call to action效果
                 } else {
-                    // 2.sideBar變化
-                    if (window.scrollY > windowH * 0.5 && window.scrollY < windowH * 1.5) {
-                        // 2.抓取視窗高度改變aside
-                        // 有時間加上before小點換顏色
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '22px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    } else if (window.scrollY > windowH * 1.5 && window.scrollY < windowH * 2.5) {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '22px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    } else if (window.scrollY > windowH * 2.5 && window.scrollY < windowH * 3.5) {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '22px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    } else if (window.scrollY > windowH * 3.5 && window.scrollY < windowH * 4.5) {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '22px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    } else if (window.scrollY > windowH * 4.5 && window.scrollY < windowH * 5.5) {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '22px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    } else if (window.scrollY > windowH * 5.5) {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '16px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '22px'; //7
-                        // aside.firstElementChild.lastElementChild.style.fontSize = '20px'; //top放大或加上呼吸效果call to action效果
-                    } else {
-                        aside.firstElementChild.firstElementChild.style.fontSize = '22px'; //1
-                        aside.firstElementChild.firstElementChild.nextElementSibling.style.fontSize = '16px'; //2
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //3
-                        aside.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.style.fontSize =
-                            '16px'; //4
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //5
-                        aside.firstElementChild.lastElementChild.previousElementSibling.previousElementSibling.style.fontSize =
-                            '16px'; //6
-                        aside.firstElementChild.lastElementChild.previousElementSibling.style.fontSize = '16px'; //7
-                    }
+                    $('.js_indexAside_type')
+                        .children('a')
+                        .css({ fontSize: '14px', color: 'rgba(0, 0, 0, 0.1)' });
+                    $('.js_type_photo')
+                        .children('a')
+                        .css({ fontSize: '20px', color: 'rgba(0, 0, 0, 0.6)' });
                 }
             };
 
@@ -532,6 +532,11 @@
             });
             $('#js_film_05').click(function() {
                 $('#js_iframe').attr('src', 'https://www.youtube.com/embed/ft3HxzowX7o');
+                $('#js_lightBox').css('display', 'block');
+                $('#js_lightBox').css('opacity', '1');
+            });
+            $('#js_film_06').click(function() {
+                $('#js_iframe').attr('src', 'https://www.youtube.com/embed/CDQMI4GWHIo');
                 $('#js_lightBox').css('display', 'block');
                 $('#js_lightBox').css('opacity', '1');
             });
