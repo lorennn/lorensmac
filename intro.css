@@ -14,6 +14,10 @@
 .breadcrumb > ul {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     writing-mode: vertical-lr;
     display: -webkit-box;
@@ -67,6 +71,9 @@ body {
     height: 80px;
     position: fixed;
     top: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     display: -webkit-box;
     display: -moz-box;
@@ -98,6 +105,9 @@ body {
     border-right: 7px solid rgba(50, 50, 50, 0.3);
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
+    -webkit-transition: border-right 0.5s;
+    -moz-transition: border-right 0.5s;
+    -o-transition: border-right 0.5s;
     transition: border-right 0.5s;
 }
 .prolio_small a:hover ::before {
@@ -183,7 +193,14 @@ body {
     top: 0;
     background-color: #ffffffd9;
     box-shadow: -2px 0 15px #0000000f;
+    -webkit-transform: translateX(120%);
+    -moz-transform: translateX(120%);
+    -ms-transform: translateX(120%);
+    -o-transform: translateX(120%);
     transform: translateX(120%);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
 .asideImg_pic {
@@ -192,6 +209,9 @@ body {
     height: 60vh;
     margin: 20vh auto 20vh;
     box-shadow: -2px 12px 15px #0000000f;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 .asideImg_pic_img {
@@ -423,9 +443,11 @@ body {
     line-height: 1.4;
     padding: 0 5px;
     font-size: 16px;
-    /* color: #aac289; */
     color: #819e58;
     opacity: 0.6;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 .language .item_L .fa-external-link-alt:hover {
