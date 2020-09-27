@@ -56,6 +56,9 @@ body {
     width: 250px;
     height: 100vh;
     left: -60px;
+    background-image: -webkit-linear-gradient(90deg, #f2f3f5 14%, transparent);
+    background-image: -moz-linear-gradient(90deg, #f2f3f5 14%, transparent);
+    background-image: -o-linear-gradient(90deg, #f2f3f5 14%, transparent);  
     background-image: linear-gradient(90deg, #f2f3f5 14%, transparent);
 }
 .indexAside ul::before {
@@ -182,15 +185,19 @@ body {
     height: 100vh;
     position: absolute;
     top: 0;
-    /* background-color: rgba(255, 255, 255, 0.6); */
 }
 .prolio .picName {
     width: 25%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     margin: auto;
-    /* margin-left: 55%;
-    margin-top: -20px; */
     position: relative;
     top: 60%;
     transform: translateY(-50%);
@@ -262,8 +269,10 @@ body {
     width: 100%;
     height: 50vh;
     color: white;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-content: center;
-    -webkit-align-content: center;
 }
 
 .prolio .left > div {
@@ -292,17 +301,25 @@ body {
 .prolio_small {
     width: 100%;
     height: 80px;
-    /* height: 0px; */
     background-color: rgba(255, 255, 255, 0.9);
     position: fixed;
-    /* position: absolute; */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    /* display: none; */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     transition: height 1s;
 }
 
 .prolio_small a:first-child {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     text-decoration: none;
 }
@@ -325,7 +342,7 @@ body {
 .prolio_small .name div {
     letter-spacing: 6px;
     line-height: 2;
-    font-size: 18px;
+    font-size: 16px;
 }
 .prolio_small .name span {
     letter-spacing: 3px;
@@ -409,6 +426,10 @@ body {
 }
 .object {
     overflow-x: scroll;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     position: relative;
     /* position: fixed; */

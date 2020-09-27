@@ -16,6 +16,10 @@
     top: 50%;
     transform: translateY(-50%);
     writing-mode: vertical-lr;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 .breadcrumb > ul::before {
@@ -64,12 +68,23 @@ body {
     position: fixed;
     top: 0;
     transition: all 0.5s;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.9);
 }
 .prolio_small {
-    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;-webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -ms-flex-pack: center;
     align-items: center;
     height: unset;
     background-color: unset;
@@ -108,6 +123,10 @@ body {
     margin: 80px auto 0;
 }
 .self_R {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 .self_head {
@@ -219,6 +238,10 @@ body {
     font-size: 17px;
 }
 .item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     padding: 5px 0;
 }
@@ -248,7 +271,11 @@ body {
     width: 100%;
 }
 .skill-lang {
-    /* display: flex; */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     width: 50%;
     margin: 0 auto;
 }
@@ -262,6 +289,10 @@ body {
 }
 .item_L {
     width: 60%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     padding-left: 40px;
     box-sizing: border-box;
@@ -269,6 +300,10 @@ body {
 }
 .item_R {
     width: 35%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 .item_name {
@@ -279,7 +314,7 @@ body {
 .item_line {
     width: 70%;
     height: 4px;
-    align-self: center;
+    align-self: center;/* 兼容未處理 */
     border-radius: 2px;
     background-color: rgb(201, 201, 201);
 }
@@ -326,6 +361,11 @@ body {
     background-image: url(img/intro/ps.png);
 }
 .item_craft_inner {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-box-pack: flex-end;
+    -webkit-justify-content: flex-end;
     justify-content: flex-end;
     line-height: 1.5;
     font-size: 15px;
@@ -364,7 +404,7 @@ body {
     padding: 5px 0;
 }
 .language .item_L .item_img {
-    align-self: center;
+    align-self: center;/* 兼容未處理 */
 }
 .language .item_EN .item_line::before {
     width: 75%;
