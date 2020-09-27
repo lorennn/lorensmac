@@ -135,10 +135,8 @@ body {
 /* prolio 介紹區 */
 .prolio {
     width: 100%;
-    height: unset;
-    /* height: 201vh; */
+    height: auto;
     position: fixed;
-    /* position: absolute; */
     background-color: rgba(255, 255, 255, 0.5);
     display: block;
     z-index: 5;
@@ -177,6 +175,10 @@ body {
     position: absolute;
     display: block;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 0;
 }
@@ -200,6 +202,10 @@ body {
     margin: auto;
     position: relative;
     top: 60%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 1;
 }
@@ -210,6 +216,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     -webkit-filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
+    -moz-filter:drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
     filter: drop-shadow(8px 8px 7px rgba(0, 0, 0, 0.1));
 }
 
@@ -223,6 +230,7 @@ body {
     letter-spacing: 7px;
     line-height: 2.5;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    -moz-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 .prolio .picName span {
@@ -243,6 +251,8 @@ body {
     position: relative;
     right: 0px;
     left: 0px;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+    -moz-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
     transition: color 0.5s;
 }
@@ -257,13 +267,14 @@ body {
 
 .prolio .picName:hover .name .fa-caret-right,
 .prolio .picName:hover .name a {
+    -webkit-filter: none;
+    -moz-filter: none;
     filter: none;
     transition: filter 0.5s;
 }
 
 .prolio .left {
     display: none;
-    /* display: flex; */
     background-color: #aaa;
     position: relative;
     width: 100%;
@@ -280,6 +291,10 @@ body {
     position: relative;
     top: 30%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -289,12 +304,14 @@ body {
     letter-spacing: 2px;
     line-height: 2.5;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    -moz-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 .prolio .left span {
     letter-spacing: 2px;
     -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+    -moz-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
@@ -489,10 +506,14 @@ body {
     box-sizing: border-box;
     transition: all 0.5s;
     transform: scale(1);
+    -webkit-filter: grayscale(5%);
+    -moz-filter: grayscale(5%);
     filter: grayscale(5%);
 }
 
 .object > .item:hover > figure img {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
     filter: grayscale(0%);
     transform: scale(1.05);
 }
@@ -525,8 +546,8 @@ body {
     z-index: -1;
 }
 .object.photography > .item:hover img {
-    filter: unset;
-    transform: unset;
+    filter: none;
+    transform: none;
 }
 .object.photography p.photoImg0 {
     background-image: url(img/photo0.png);
@@ -599,8 +620,10 @@ body {
     height: 50%;
 }
 .object.film > .item:hover img {
-    filter: unset;
-    transform: unset;
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+    transform: none;
 }
 .object.film p.filmImg1 {
     background-image: url(img/film1.png);

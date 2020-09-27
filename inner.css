@@ -12,6 +12,10 @@ html.html_photo {
 .breadcrumb > ul {
     position: relative;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     writing-mode: vertical-lr;
     display: -webkit-box;
@@ -255,6 +259,9 @@ html.html_photo {
 }
 .light {
     opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 .pic_light:hover .light {

@@ -86,8 +86,8 @@ body {
     -webkit-align-items: center;
     -ms-flex-pack: center;
     align-items: center;
-    height: unset;
-    background-color: unset;
+    height: auto;
+    background-color: none;
     margin-top: 11px;
 }
 .prolio_small .logo::before {
